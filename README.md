@@ -31,6 +31,7 @@ To build the site, run:
 
 ```shell
 npm run build
+npm run push-gh-pages
 ```
 
-Then commit and push the changes to the repository on GitHub.
+Make sure you commit your most recent changes before continuing.
