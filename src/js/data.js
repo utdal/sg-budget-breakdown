@@ -1,48 +1,53 @@
-import data from '../data/budget.json';
-  
+import sankey_top from '../data/top_level.json';
+import sankey_instruction from '../data/ed-gen-funds_instruction.json';
+import sankey_operations from '../data/ed-gen-funds_oper_main.json';
+import treemap_insti_supp from '../data/ed-gen-funds_insti_supp.json';  
+import treemap_fees from '../data/fees.json';
+
 am4core.useTheme(am4themes_animated);
 
-var chart = am4core.create("chartdiv", am4charts.SankeyDiagram);
-chart.data = data;
-chart.dataFields.fromName = "from";
-chart.dataFields.toName = "to";
-chart.dataFields.value = "value";
-
-// for right-most label to fit
-chart.paddingRight = 100;
-chart.paddingBottom = 25;
-
-// Add events on links
-chart.links.template.cursorOverStyle = am4core.MouseCursorStyle.pointer;
-chart.links.template.events.on("hit", function(ev) {
-    chart.colors.reset();
-    var nav = chart.children.getIndex(0);
-    var linkData = ev.target.dataItem.dataContext;
-    if (linkData.sub) {
-    chart.data = linkData.sub;
-    nav.data.push({
-        name: ev.target.populateString("{fromName}→{toName}"),
-        step: ev.target.dataItem.dataContext
-    });
-    nav.invalidateData();
-    }
-});
-
-// Add navigation bar
-var nav = chart.createChild(am4charts.NavigationBar);
-nav.data = [{ name: "Top" }];
-nav.toBack();
-
-nav.links.template.events.on("hit", function(ev) {
-    var target = ev.target.dataItem.dataContext;
-    var nav = ev.target.parent;
-    chart.colors.reset();
-    if (target.step) {
-    chart.data = target.step.sub;
-    nav.data.splice(nav.data.indexOf(target) + 1);
-    nav.invalidateData();
-    } else {
+function buildSankey(divName, data, padRight) {
+    let chart = am4core.create(divName, am4charts.SankeyDiagram);
     chart.data = data;
-    nav.data = [{ name: "Top" }];
-    }
-});
+    chart.dataFields.fromName = "from";
+    chart.dataFields.toName = "to";
+    chart.dataFields.value = "value";
+    chart.paddingRight = padRight;
+    chart.paddingTop = 25;
+    chart.paddingBottom = 25;
+}
+
+function buildTreeMap(divName, data) {
+    var chart = am4core.create(divName, am4charts.TreeMap);
+    chart.data = data;
+
+    /* Set color step */
+    chart.colors.step = 2;
+    chart.paddingBottom = 25;
+
+    /* Define data fields */
+    chart.dataFields.value = "value";
+    chart.dataFields.name = "name";
+    chart.dataFields.children = "children";
+
+    let level1 = chart.seriesTemplates.create("0");
+    let level1_column = level1.columns.template;
+    level1_column.column.cornerRadius(10, 10, 10, 10);
+    level1_column.fillOpacity = 0.8;
+    level1_column.stroke = am4core.color("#fff");
+    level1_column.strokeWidth = 5;
+    level1_column.strokeOpacity = 1;
+
+    let level1_bullet = level1.bullets.push(new am4charts.LabelBullet());
+    level1_bullet.locationY = 0.5;
+    level1_bullet.locationX = 0.5;
+    level1_bullet.label.text = "{name}";
+    level1_bullet.label.fill = am4core.color("#fff");
+}
+
+buildSankey("sankey_top", sankey_top, 100);
+buildSankey("sankey_instruction", sankey_instruction, 200);
+buildSankey("sankey_operations", sankey_operations, 200);
+
+buildTreeMap("treemap_fees", treemap_fees);
+buildTreeMap("treemap_insti_supp", treemap_insti_supp);
