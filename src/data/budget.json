@@ -1,0 +1,699 @@
+[
+    {
+        "from": "Adjustments",
+        "to": "Educational and General",
+        "value":  22024442.73,
+        "sub": []
+    },
+    {
+        "from": "Adjustments",
+        "to": "Designated",
+        "value":  107852933.32,
+        "sub": []
+    },
+    {
+        "from": "Adjustments",
+        "to": "Auxiliary",
+        "value": 632463.00,
+        "sub": []
+    },
+    {
+        "from": "Adjustments",
+        "to": "Restricted",
+        "value":  38718937.94,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Adjustments (Out)",
+        "value": 1786830.22,
+        "sub": []
+    },
+    {
+        "from": "Auxiliary",
+        "to": "Adjustments (Out)",
+        "value": 1733097.87,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Adjustments (Out)",
+        "value": 11163.90,
+        "sub": []
+    },
+    {
+        "from": "AUF and Appropriation Transfers Received",
+        "to": "Educational and General",
+        "value": 6379791,
+        "sub": []
+    },
+    {
+        "from": "State Appropriations",
+        "to": "Educational and General",
+        "value": 129486370,
+        "sub": []
+    },
+    {
+        "from": "Tuition and Fees",
+        "to": "Educational and General",
+        "value": 67861826,
+        "sub": []
+    },
+    {
+        "from": "Tuition and Fees",
+        "to": "Designated",
+        "value": 412021339,
+        "sub": []
+    },
+    {
+        "from": "Tuition and Fees",
+        "to": "Auxiliary",
+        "value": 32568558,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Discount/Allowance",
+        "value": 19778126.09,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Discount/Allowance",
+        "value": 120082386.15,
+        "sub": []
+    },
+    {
+        "from": "Auxiliary",
+        "to": "Discount/Allowance",
+        "value": 9492008.76,
+        "sub": []
+    },
+    {
+        "from": "Federal Sponsored Programs",
+        "to": "Designated",
+        "value": 18517092,
+        "sub": []
+    },
+    {
+        "from": "Federal Sponsored Programs",
+        "to": "Restricted",
+        "value": 44416526,
+        "sub": []
+    },
+    {
+        "from": "State Sponsored Programs",
+        "to": "Educational and General",
+        "value": 16458054,
+        "sub": []
+    },
+    {
+        "from": "State Sponsored Programs",
+        "to": "Restricted",
+        "value": 2241656,
+        "sub": []
+    },
+    {
+        "from": "Local and Private Sponsored Programs",
+        "to": "Designated",
+        "value": 2178599,
+        "sub": []
+    },
+    {
+        "from": "Local and Private Sponsored Programs",
+        "to": "Restricted",
+        "value": 12621944,
+        "sub": []
+    },
+    {
+        "from": "Net Sales and Services of Educational Activities",
+        "to": "Educational and General",
+        "value": 8081998,
+        "sub": []
+    },
+    {
+        "from": "Net Sales and Services of Educational Activities",
+        "to": "Designated",
+        "value": 28193185,
+        "sub": []
+    },
+    {
+        "from": "Net Sales and Services of Educational Activities",
+        "to": "Restricted",
+        "value": 923000,
+        "sub": []
+    },
+    {
+        "from": "Net Auxiliary Enterprises (Revenues)",
+        "to": "Auxiliary",
+        "value": 51523512,
+        "sub": []
+    },
+    {
+        "from": "Other Operating Revenues",
+        "to": "Designated",
+        "value": 7461361,
+        "sub": []
+    },
+    {
+        "from": "Other Operating Revenues",
+        "to": "Restricted",
+        "value": 1751000,
+        "sub": []
+    },
+    {
+        "from": "Federal Sponsored Programs (Nonoperating)",
+        "to": "Restricted",
+        "value": 35952980,
+        "sub": []
+    },
+    {
+        "from": "State/Local Sponsored Programs (Nonoperating)",
+        "to": "Designated",
+        "value": 11324826,
+        "sub": []
+    },
+    {
+        "from": "Gifts in Support of Operations",
+        "to": "Designated",
+        "value": 3000,
+        "sub": []
+    },
+    {
+        "from": "Gifts in Support of Operations",
+        "to": "Restricted",
+        "value": 12770000,
+        "sub": []
+    },
+    {
+        "from": "Net Investment Income",
+        "to": "Educational and General",
+        "value": 100000,
+        "sub": []
+    },
+    {
+        "from": "Net Investment Income",
+        "to": "Designated",
+        "value": 23615381,
+        "sub": []
+    },
+    {
+        "from": "Net Investment Income",
+        "to": "Restricted",
+        "value": 21632757,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Instruction",
+        "value": 128617222,
+        "sub": [
+            {
+                "from": "Provost",
+                "to": "Office Salaries (Provost)",
+                "value": 905745,
+                "sub": []
+            },
+            {
+                "from": "A&H",
+                "to": "Salaries (A&H)",
+                "value": 7310426,
+                "sub": []
+            },
+            {
+                "from": "A&H",
+                "to": "Maintenance & Operations (A&H)",
+                "value": 1410,
+                "sub": []
+            },
+            {
+                "from": "NSM",
+                "to": "Admin Salaries (NSM)",
+                "value": 805784,
+                "sub": []
+            },
+            {
+                "from": "NSM",
+                "to": "Faculty Salaries (NSM)",
+                "value": 16078069,
+                "sub": []
+            },
+            {
+                "from": "NSM",
+                "to": "Classified Salaries (NSM)",
+                "value": 1827674,
+                "sub": []
+            },
+            {
+                "from": "NSM",
+                "to": "Maintenance & Operations (NSM)",
+                "value": 390000,
+                "sub": []
+            },
+            {
+                "from": "EPPS",
+                "to": "Salaries (EPPS)",
+                "value": 7068683,
+                "sub": []
+            },
+            {
+                "from": "JSOM",
+                "to": "Admin Salaries (JSOM)",
+                "value": 1763668,
+                "sub": []
+            },
+            {
+                "from": "JSOM",
+                "to": "Faculty Salaries (JSOM)",
+                "value": 18776479,
+                "sub": []
+            },
+            {
+                "from": "JSOM",
+                "to": "Classified Salaries (JSOM)",
+                "value": 4043792,
+                "sub": []
+            },
+            {
+                "from": "BBS",
+                "to": "Admin Salaries (BBS)",
+                "value": 811728,
+                "sub": []
+            },
+            {
+                "from": "BBS",
+                "to": "Faculty Salaries (BBS)",
+                "value": 7206933,
+                "sub": []
+            },
+            {
+                "from": "BBS",
+                "to": "Classified Salaries (BBS)",
+                "value": 978677,
+                "sub": []
+            },
+            {
+                "from": "BBS",
+                "to": "Maintenance & Operations (BBS)",
+                "value": 8220,
+                "sub": []
+            },
+            {
+                "from": "IS",
+                "to": "Salaries (IS)",
+                "value": 1274151,
+                "sub": []
+            },
+            {
+                "from": "ECS",
+                "to": "Admin Salaries (ECS)",
+                "value": 212406,
+                "sub": []
+            },
+            {
+                "from": "ECS",
+                "to": "Faculty Salaries (ECS)",
+                "value": 21210967,
+                "sub": []
+            },
+            {
+                "from": "ECS",
+                "to": "Classified Salaries (ECS)",
+                "value": 3508263,
+                "sub": []
+            },
+            {
+                "from": "ECS",
+                "to": "Maintenance & Operations (ECS)",
+                "value": 185000,
+                "sub": []
+            },
+            {
+                "from": "ATEC",
+                "to": "Salaries (ATEC)",
+                "value": 3999331,
+                "sub": []
+            },
+            {
+                "from": "ATEC",
+                "to": "Maintenance & Operations (ATEC)",
+                "value": 1680,
+                "sub": []
+            },
+            {
+                "from": "Other Instructional Support",
+                "to": "McDermott Scholars Admin Salaries",
+                "value": 157106,
+                "sub": []
+            },
+            {
+                "from": "Other Instructional Support",
+                "to": "Research Salaries",
+                "value": 6397389,
+                "sub": []
+            },
+            {
+                "from": "Other Instructional Support",
+                "to": "Undergraduate Education Office Salaries",
+                "value": 702165,
+                "sub": []
+            },
+            {
+                "from": "Other Instructional Support",
+                "to": "Graduate Education Office Salaries",
+                "value": 774384,
+                "sub": []
+            },
+            {
+                "from": "Other Instructional Support",
+                "to": "Honors Program Salaries",
+                "value": 103388,
+                "sub": []
+            },
+            {
+                "from": "Other Instructional Support",
+                "to": "Merit Pool Salaries",
+                "value": 4460948,
+                "sub": []
+            }
+        ]
+    },
+    {
+        "from": "Designated",
+        "to": "Instruction",
+        "value": 117520436,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Instruction",
+        "value": 1526635,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Acad. Support",
+        "value": 21110503,
+        "sub": [
+            {
+                "from": "Callier Center",
+                "to": "Salaries & Operations",
+                "value": 4324957,
+                "sub": []
+            },
+            {
+                "from": "Special Item Instructional Support",
+                "to": "Salaries & Operations",
+                "value": 342017,
+                "sub": []
+            },
+            {
+                "from": "Academic Support",
+                "to": "Staff Benefits",
+                "value": 16443529,
+                "sub": []
+            }
+        ]
+    },
+    {
+        "from": "Designated",
+        "to": "Acad. Support",
+        "value": 66035930,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Acad. Support",
+        "value": 5425446,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Research",
+        "value": 14746822,
+        "sub": [
+            {
+                "from": "Research Enhancement",
+                "to": "Salaries & Operations",
+                "value": 10590309,
+                "sub": []
+            },
+            {
+                "from": "Special Items Directed Research",
+                "to": "Salaries & Operations",
+                "value": 2011818,
+                "sub": []
+            },
+            {
+                "from": "Research",
+                "to": "Staff Benefits",
+                "value": 2144695,
+                "sub": []
+            }
+        ]
+        
+        
+        
+    },
+    {
+        "from": "Designated",
+        "to": "Research",
+        "value": 53499676,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Research",
+        "value": 76539661,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Public Service",
+        "value": 4262128,
+        "sub": [
+            {
+                "from": "Public Service",
+                "to": "General Salaries & Operations",
+                "value": 15312,
+                "sub": []
+            },
+            {
+                "from": "Public Service",
+                "to": "Organized Activities Salaries & Operations",
+                "value": 3757041,
+                "sub": []
+            },
+            {
+                "from": "Public Service",
+                "to": "Special Items",
+                "value": 365444,
+                "sub": []
+            },
+            {
+                "from": "Public Service",
+                "to": "Staff Benefits",
+                "value": 124331,
+                "sub": []
+            }
+        ]
+        
+        
+    },
+    {
+        "from": "Designated",
+        "to": "Public Service",
+        "value": 3427575,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Public Service",
+        "value": 2954151,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Institut. Supp.",
+        "value": 19055992,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Institut. Supp.",
+        "value": 31288006,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Institut. Supp.",
+        "value": 3231736,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Stud. Serv.",
+        "value": 297290,
+        "sub": [
+            {
+                "from": "Student Services",
+                "to": "Salaries & Operations",
+                "value": 218458,
+                "sub": []
+            },
+            {
+                "from": "Institutional Support",
+                "to": "Staff Benefits",
+                "value": 78832,
+                "sub": []
+            }
+        ]
+        
+        
+    },
+    {
+        "from": "Designated",
+        "to": "Stud. Serv.",
+        "value": 22802879,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Stud. Serv.",
+        "value": 590077,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Operation/Mainten.",
+        "value": 17943234,
+        "sub": [
+            {
+                "from": "Operations & Maintenance",
+                "to": "Facilities Management",
+                "value": 7451020,
+                "sub": []
+            },
+            {
+                "from": "Operations & Maintenance",
+                "to": "EMS",
+                "value": 779801,
+                "sub": []
+            },
+            {
+                "from": "Operations & Maintenance",
+                "to": "University Police",
+                "value": 4712925,
+                "sub": []
+            }
+        ]
+    },
+    {
+        "from": "Designated",
+        "to": "Operation/Mainten.",
+        "value": 39817738,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Operation/Mainten.",
+        "value": 1255039,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Unexpended Plant Funds",
+        "value": 2000000,
+        "sub": []
+    },
+    {
+        "from": "Unexpended Plant Funds",
+        "to": "Operation/Mainten.",
+        "value": 2000000,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Scholarship/Fellowships",
+        "value": 17099546,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Scholarship/Fellowships",
+        "value": 124761905,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Scholarship/Fellowships",
+        "value": 39831329,
+        "sub": []
+    },
+    {
+        "from": "Auxiliary",
+        "to": "Auxiliary Enterprises (Expenses)",
+        "value": 48275378,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Debt Service (SBITA Interest)",
+        "value": 5847851,
+        "sub": []
+    },
+    {
+        "from": "Auxiliary",
+        "to": "Debt Service (SBITA Interest)",
+        "value": 14243285,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Debt Service (SBITA Interest)",
+        "value": 95089,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Debt Service (SBITA Principal)",
+        "value": 12016608,
+        "sub": []
+    },
+    {
+        "from": "Auxiliary",
+        "to": "Debt Service (SBITA Principal)",
+        "value": 10179915,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Debt Service (SBITA Principal)",
+        "value": 65000,
+        "sub": []
+    },
+    {
+        "from": "Educational and General",
+        "to": "Depreciation & Amortization",
+        "value": 20713151.49,
+        "sub": []
+    },
+    {
+        "from": "Designated",
+        "to": "Depreciation & Amortization",
+        "value": 44814998.40,
+        "sub": []
+    },
+    {
+        "from": "Auxiliary",
+        "to": "Depreciation & Amortization",
+        "value": 4378612.80,
+        "sub": []
+    },
+    {
+        "from": "Restricted",
+        "to": "Depreciation & Amortization",
+        "value": 18295230.32,
+        "sub": []
+    }
+]
