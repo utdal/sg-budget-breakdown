@@ -15,6 +15,11 @@ function buildSankey(divName, data, padRight) {
     chart.paddingRight = padRight;
     chart.paddingTop = 25;
     chart.paddingBottom = 25;
+    let nodeTemplate = chart.nodes.template;
+    nodeTemplate.width = 15;
+    nodeTemplate.nameLabel.locationX = 0.2;
+    chart.nodes.template.nameLabel.label.truncate = false;
+    chart.nodes.template.nameLabel.label.wrap = false;
 }
 
 function buildTreeMap(divName, data) {
@@ -50,8 +55,8 @@ function buildTreeMap(divName, data) {
     level0_bullet.label.fill = am4core.color("#f1f5f9");
 }
 
-buildSankey("sankey_top", sankey_top, 100);
-buildSankey("sankey_instruction", sankey_instruction, 200);
+buildSankey("sankey_top", sankey_top, 200);
+buildSankey("sankey_instruction", sankey_instruction, 300);
 buildSankey("sankey_operations", sankey_operations, 200);
 
 buildTreeMap("treemap_fees", treemap_fees);

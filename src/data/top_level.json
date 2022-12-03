@@ -42,7 +42,7 @@
         "sub": []
     },
     {
-        "from": "AUF and Appropriation Transfers Received",
+        "from": "AUF/Approp. Transfers Received",
         "to": "Educational and General",
         "value": 6379791,
         "sub": []
@@ -114,37 +114,37 @@
         "sub": []
     },
     {
-        "from": "Local and Private Sponsored Programs",
+        "from": "Local/Private Sponsored Programs",
         "to": "Designated",
         "value": 2178599,
         "sub": []
     },
     {
-        "from": "Local and Private Sponsored Programs",
+        "from": "Local/Private Sponsored Programs",
         "to": "Restricted",
         "value": 12621944,
         "sub": []
     },
     {
-        "from": "Net Sales and Services of Educational Activities",
+        "from": "Sales/Services of Edu. Activities",
         "to": "Educational and General",
         "value": 8081998,
         "sub": []
     },
     {
-        "from": "Net Sales and Services of Educational Activities",
+        "from": "Sales/Services of Edu. Activities",
         "to": "Designated",
         "value": 28193185,
         "sub": []
     },
     {
-        "from": "Net Sales and Services of Educational Activities",
+        "from": "Sales/Services of Edu. Activities",
         "to": "Restricted",
         "value": 923000,
         "sub": []
     },
     {
-        "from": "Net Auxiliary Enterprises (Revenues)",
+        "from": "Auxiliary Enterprises (Revenues)",
         "to": "Auxiliary",
         "value": 51523512,
         "sub": []
@@ -162,25 +162,25 @@
         "sub": []
     },
     {
-        "from": "Federal Sponsored Programs (Nonoperating)",
+        "from": "Federal Sponsored Prog. (Nonoperating)",
         "to": "Restricted",
         "value": 35952980,
         "sub": []
     },
     {
-        "from": "State/Local Sponsored Programs (Nonoperating)",
+        "from": "State/Local Sponsored Prog. (Nonoperating)",
         "to": "Designated",
         "value": 11324826,
         "sub": []
     },
     {
-        "from": "Gifts in Support of Operations",
+        "from": "Gifts for Operations",
         "to": "Designated",
         "value": 3000,
         "sub": []
     },
     {
-        "from": "Gifts in Support of Operations",
+        "from": "Gifts for Operations",
         "to": "Restricted",
         "value": 12770000,
         "sub": []
@@ -361,43 +361,43 @@
     },
     {
         "from": "Auxiliary",
-        "to": "Auxiliary Enterprises (Expenses)",
+        "to": "Aux. Enterprises (Expenses)",
         "value": 48275378,
         "sub": []
     },
     {
         "from": "Designated",
-        "to": "Debt Service (SBITA Interest)",
+        "to": "Debt (Interest)",
         "value": 5847851,
         "sub": []
     },
     {
         "from": "Auxiliary",
-        "to": "Debt Service (SBITA Interest)",
+        "to": "Debt (Interest)",
         "value": 14243285,
         "sub": []
     },
     {
         "from": "Restricted",
-        "to": "Debt Service (SBITA Interest)",
+        "to": "Debt (Interest)",
         "value": 95089,
         "sub": []
     },
     {
         "from": "Designated",
-        "to": "Debt Service (SBITA Principal)",
+        "to": "Debt (Principal)",
         "value": 12016608,
         "sub": []
     },
     {
         "from": "Auxiliary",
-        "to": "Debt Service (SBITA Principal)",
+        "to": "Debt (Principal)",
         "value": 10179915,
         "sub": []
     },
     {
         "from": "Restricted",
-        "to": "Debt Service (SBITA Principal)",
+        "to": "Debt (Principal)",
         "value": 65000,
         "sub": []
     },

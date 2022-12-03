@@ -145,25 +145,25 @@
     },
     {
         "from": "Other Instructional Support",
-        "to": "Undergraduate Education Office Salaries",
+        "to": "Undergrad. Edu. Office Salaries",
         "value": 702165,
         "sub": []
     },
     {
         "from": "Other Instructional Support",
-        "to": "Graduate Education Office Salaries",
+        "to": "Grad. Edu. Office Salaries",
         "value": 774384,
         "sub": []
     },
     {
         "from": "Other Instructional Support",
-        "to": "Honors Program Salaries",
+        "to": "Honors Prog. Salaries",
         "value": 103388,
         "sub": []
     },
     {
         "from": "Other Instructional Support",
-        "to": "Merit Pool Salaries",
+        "to": "Merit Pool",
         "value": 4460948,
         "sub": []
     }
