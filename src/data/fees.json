@@ -1,0 +1,328 @@
+[
+    {
+        "name": "Student Services",
+        "children": [
+            {
+                "name": "AMP",
+                "value": 53638
+            },
+            {
+                "name": "Assessment",
+                "value": 153084
+            },
+            {
+                "name": "Athletic Supplement",
+                "value": 550154
+            },
+            {
+                "name": "Callier Center",
+                "value": 10420
+            },
+            {
+                "name": "Campus Events",
+                "value": 171683
+            },
+            {
+                "name": "Center for Students in Recovery",
+                "value": 164647
+            },
+            {
+                "name": "Child Care",
+                "value": 33650
+            },
+            {
+                "name": "Dean of Students",
+                "value": 980181
+            },
+            {
+                "name": "Debate",
+                "value": 109000
+            },
+            {
+                "name": "Drumline",
+                "value": 6639
+            },
+            {
+                "name": "Esports",
+                "value": 40156
+            },
+            {
+                "name": "Fraternity & Sorority Life",
+                "value": 316492
+            },
+            {
+                "name": "Gender Center",
+                "value": 170811
+            },
+            {
+                "name": "Graduate Student Assembly",
+                "value": 55500
+            },
+            {
+                "name": "Intercultural Programs",
+                "value": 382653
+            },
+            {
+                "name": "Legal Mediation",
+                "value": 33011
+            },
+            {
+                "name": "Marketing Administration",
+                "value": 258806
+            },
+            {
+                "name": "Mercury",
+                "value": 65416
+            },
+            {
+                "name": "Meteor Theatre",
+                "value": 73752
+            },
+            {
+                "name": "Military and Veteran Center",
+                "value": 276944
+            },
+            {
+                "name": "Mock Trial",
+                "value": 87844
+            },
+            {
+                "name": "Model UN",
+                "value": 80114
+            },
+            {
+                "name": "Moot Court",
+                "value": 49458
+            },
+            {
+                "name": "Multicultural Center",
+                "value": 735076
+            },
+            {
+                "name": "Pep Band",
+                "value": 28699
+            },
+            {
+                "name": "Radio UTD",
+                "value": 55280
+            },
+            {
+                "name": "Reunion",
+                "value": 19608
+            },
+            {
+                "name": "Spirit Program",
+                "value": 179518
+            },
+            {
+                "name": "Student AcessAbility",
+                "value": 4500
+            },
+            {
+                "name": "Student Government",
+                "value": 300576
+            },
+            {
+                "name": "Student Health Center",
+                "value": 1867511
+            },
+            {
+                "name": "Student Leadership Programs",
+                "value": 127834
+            },
+            {
+                "name": "Student Media Administration",
+                "value": 268582
+            },
+            {
+                "name": "Student Organizations (SOC)",
+                "value": 417987
+            },
+            {
+                "name": "Student Programs Administration",
+                "value": 151214
+            },
+            {
+                "name": "Student Transition Programs",
+                "value": 631286
+            },
+            {
+                "name": "Student Volunteerism",
+                "value": 398030
+            },
+            {
+                "name": "Student Wellness Center",
+                "value": 380839
+            },
+            {
+                "name": "SUAAB",
+                "value": 517276
+            },
+            {
+                "name": "University Career Center",
+                "value": 1608699
+            },
+            {
+                "name": "University Recreation",
+                "value": 478304
+            },
+            {
+                "name": "UTD TV",
+                "value": 47685
+            },
+            {
+                "name": "VPSA Office",
+                "value": 450845
+            },
+            {
+                "name": "Year Experience Program",
+                "value": 103230
+            },
+        ]
+    },
+    {
+        "name": "Student Union",
+        "children": [
+            {
+                "name": "SU Administration",
+                "value": 1241949
+            },
+            {
+                "name": "Building Operations",
+                "value": 564495
+            }
+        ]
+    },
+    {
+        "name": "SSB",
+        "children": [
+            {
+                "name": "Maintenance",
+                "value": 583218
+            },
+            {
+                "name": "Utilities",
+                "value": 180696
+            },
+            {
+                "name": "Building Debt Service",
+                "value": 2352378
+            }
+        ]
+    },
+    {
+        "name": "Recreation",
+        "children": [
+            {
+                "name": "Activity Center",
+                "value": 1638351
+            },
+            {
+                "name": "Utilities & Debt Service",
+                "value": 1480401
+            },
+            {
+                "name": "Field Maintenance",
+                "value": 395435
+            }
+        ]
+    },
+    {
+        "name": "Medical",
+        "children": [
+            {
+                "name": "Student Counseling Center",
+                "value": 2241413
+            }
+        ]
+    },
+    {
+        "name": "Athletics",
+        "children": [
+            {
+                "name": "Athletic Operations",
+                "value": 2381338
+            },
+            {
+                "name": "Athletic Training Room",
+                "value": 39000
+            },
+            {
+                "name": "Baseball",
+                "value": 95274
+            },
+            {
+                "name": "Basketball (Men's)",
+                "value": 79071
+            },
+            {
+                "name": "Basketball (Women's)",
+                "value": 80759
+            },
+            {
+                "name": "Cross Country",
+                "value": 32340
+            },
+            {
+                "name": "Golf",
+                "value": 82310
+            },
+            {
+                "name": "Marketing",
+                "value": 40000
+            },
+            {
+                "name": "Soccer (Men's)",
+                "value": 67993
+            },
+            {
+                "name": "Soccer (Women's)",
+                "value": 68143
+            },
+            {
+                "name": "Softball ",
+                "value": 73730
+            },
+            {
+                "name": "Strength and Conditioning ",
+                "value": 48940
+            },
+            {
+                "name": "Tennis",
+                "value": 47220
+            },
+            {
+                "name": "Track & Field",
+                "value": 36340
+            },
+            {
+                "name": "Volleyball",
+                "value": 63470
+            }
+        ]
+    },
+    {
+        "name": "Advising",
+        "value": 15059797
+    },
+    {
+        "name": "IT",
+        "value": 26997584
+    },
+    {
+        "name": "Infrastructure",
+        "value": 13640756
+    },
+    {
+        "name": "Library Aquisitions",
+        "value": 9933998
+    },
+    {
+        "name": "Transporation",
+        "value": 1143148
+    },
+    {
+        "name": "Student Business Services",
+        "value": 13401749
+    }
+]
