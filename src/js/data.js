@@ -30,19 +30,24 @@ function buildTreeMap(divName, data) {
     chart.dataFields.name = "name";
     chart.dataFields.children = "children";
 
-    let level1 = chart.seriesTemplates.create("0");
-    let level1_column = level1.columns.template;
-    level1_column.column.cornerRadius(10, 10, 10, 10);
-    level1_column.fillOpacity = 0.8;
-    level1_column.stroke = am4core.color("#fff");
-    level1_column.strokeWidth = 5;
-    level1_column.strokeOpacity = 1;
+    // only one level visible initially
+    chart.maxLevels = 2;
+    chart.zoomable = false;
 
-    let level1_bullet = level1.bullets.push(new am4charts.LabelBullet());
-    level1_bullet.locationY = 0.5;
-    level1_bullet.locationX = 0.5;
-    level1_bullet.label.text = "{name}";
-    level1_bullet.label.fill = am4core.color("#fff");
+    let level0 = chart.seriesTemplates.create("0");
+    let level0_column = level0.columns.template;
+    level0_column.fillOpacity = 0.8;
+    level0_column.stroke = am4core.color("#f1f5f9");
+
+    let level1 = chart.seriesTemplates.create("1");
+    let level1_column = level1.columns.template;
+    level1_column.fillOpacity = 0;
+    
+    let level0_bullet = level0.bullets.push(new am4charts.LabelBullet());
+    level0_bullet.locationY = 0.5;
+    level0_bullet.locationX = 0.5;
+    level0_bullet.label.text = "{name}";
+    level0_bullet.label.fill = am4core.color("#f1f5f9");
 }
 
 buildSankey("sankey_top", sankey_top, 100);
