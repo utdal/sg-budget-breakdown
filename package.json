@@ -1,11 +1,11 @@
 {
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html ./src/**/*.html",
+    "start": "parcel ./src/*.html --public-url ./",
     "prebuild-dev": "shx rm -rf dist/*",
-    "build-dev": "parcel build ./src/index.html ./src/**/*.html --no-optimize --public-url .",
+    "build-dev": "parcel build ./src/*.html --no-optimize --public-url ./",
     "prebuild": "shx rm -rf dist/*",
-    "build": "parcel build ./src/index.html ./src/**/*.html --public-url ./sg-budget-breakdown/",
+    "build": "parcel build ./src/*.html --public-url ./sg-budget-breakdown/",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
