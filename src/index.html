@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UT Dallas Budget Breakdown - Overview</title>
+    <meta property="og:site_name" content="UTD Student Government" />
+    <meta property="og:title" content="University Budget Breakdown" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="article" />
+    <meta property="article:modified_time" content="article" />
+    <meta property="article:author" content="UT Dallas Student Government" />
 
-  <title>UT Dallas Budget Breakdown - Overview</title>
-  <meta property="og:site_name" content="UTD Student Government" />
-  <meta property="og:title" content="University Budget Breakdown" />
-  <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="article" />
-  <meta property="article:modified_time" content="article" />
-  <meta property="article:author" content="UT Dallas Student Government" />
+    <meta
+      property="og:description"
+      content="Learn how your tuition funds university departments and the services that you use, and see clear, accessible information on the university's finances."
+    />
+    <meta
+      property="og:url"
+      content="https://utdal.github.io/sg-budget-breakdown"
+    />
+    <meta property="og:image" content="./img/sg-logo.jpg" />
 
-  <meta property="og:description"
-    content="Learn how your tuition funds university departments and the services that you use, and see clear, accessible information on the university's finances." />
-  <meta property="og:url" content="https://utdal.github.io/sg-budget-breakdown" />
-  <meta property="og:image" content="./img/sg-logo.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-  <link rel="stylesheet" href="./css/main.css" />
-</head>
-
-<body class="bg-slate-100">
-  <nav class="lg:flex bg-slate-700 text-white">
-    <a href="./" class="inline-block flex-1 p-4 hover:bg-slate-900 font-bold text-lg transition">
-      UTD Budget Breakdown
-    </a>
-    <a href="./team.html" class="p-4 hover:bg-slate-900 font-bold text-lg transition">
-      People
-    </a>
-    <a href="./details.html" class="p-4 hover:bg-slate-900 font-bold text-lg transition">
-      Full Breakdown
-    </a>
-  </nav>
-  <section id="jumbotron" class="bg-[#e87500] text-white">
-    <div class="max-w-4xl mx-auto p-8 lg:py-16">
-      <div class="text-center text-4xl lg:text-left lg:text-6xl font-bold">
-        UT Dallas Budget Breakdown
+  <body class="bg-slate-100">
+    <nav class="lg:flex bg-slate-700 text-white">
+      <a
+        href="./"
+        class="inline-block flex-1 p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        UTD Budget Breakdown
+      </a>
+      <a
+        href="./team.html"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        People
+      </a>
+      <a
+        href="./details.html"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        Full Breakdown
+      </a>
+    </nav>
+    <section id="jumbotron" class="bg-[#e87500] text-white">
+      <div class="max-w-4xl mx-auto p-8 lg:py-16">
+        <div class="text-center text-4xl lg:text-left lg:text-6xl font-bold">
+          UT Dallas Budget Breakdown
+        </div>
+        <div class="mt-4 text-center text-2xl lg:text-left lg:text-4xl">
+          A
+          <a
+            href="https://sg.utdallas.edu"
+            class="underline hover:text-blue-500 focus:text-blue-500 transition"
+          >
+            Student Government</a
+          >
+          project
+        </div>
       </div>
-      <div class="mt-4 text-center text-2xl lg:text-left lg:text-4xl">
-        A
-        <a href="https://sg.utdallas.edu" class="underline hover:text-blue-500 focus:text-blue-500 transition">
-          Student Government</a>
-        project
+    </section>
+    <section id="about">
+      <div class="mx-auto max-w-4xl p-4 lg:p-8">
+        <h1 class="mt-4 text-4xl font-bold">About</h1>
+        <p class="mt-4 text-lg">
+          This site is a product of a Student-Led University Budget Breakdown
+          Taskforce formed by the UT Dallas Student Government. This group was
+          formed to provide accessible and digestible information about the
+          University&apos;s Budget and usage of student fees. You will find
+          several visualizations that were generated using the University&apos;s
+          Budget for the fiscal year ending August 30, 2023.
+        </p>
+        <h1 class="mt-4 text-4xl font-bold">Motivation</h1>
+        <p class="mt-4 text-lg">
+          The
+          <a
+            class="text-blue-600"
+            href="https://www.reddit.com/r/utdallas/collection/d83a1f8c-fd7c-45f4-a7b4-32bbd2a4bc0e"
+            >student discourse</a
+          >
+          occurring during the Fall 2022 Student Union Building Fee and
+          Intercollegiate Athletics Fee Referendums revealed that students are
+          both unaware and misinformed about the nature of university finances.
+          The UT Dallas Student Government felt an obligation to inform itself
+          and the broader student body. This task force seeks to create greater
+          transparency for students and set a precedent for the Student
+          Government as a source of information that better informs students.
+          The process of reviewing, summarizing, and visualizing university
+          financial data has allowed us to answer many questions and explore new
+          topics that we wish to explore in the future.
+        </p>
       </div>
-    </div>
-  </section>
-  <section id="about">
-    <div class="mx-auto max-w-4xl p-4 lg:p-8">
-      <h1 class="mt-4 text-4xl font-bold">About</h1>
-      <p class="mt-4 text-lg">
-        This site is a product of a Student-Led University Budget Breakdown
-        Taskforce formed by the UT Dallas Student Government. This group was
-        formed to provide accessible and digestible information about the
-        University&apos;s Budget and usage of student fees. You will find
-        several visualizations that were generated using the University&apos;s
-        Budget for the fiscal year ending August 30, 2023.
-      </p>
-      <h1 class="mt-4 text-4xl font-bold">Motivation</h1>
-      <p class="mt-4 text-lg">
-        The
-        <a class="text-blue-600"
-          href="https://www.reddit.com/r/utdallas/collection/d83a1f8c-fd7c-45f4-a7b4-32bbd2a4bc0e">student discourse</a>
-        occurring during the Fall 2022 Student Union Building Fee and
-        Intercollegiate Athletics Fee Referendums revealed that students are
-        both unaware and misinformed about the nature of university finances.
-        The UT Dallas Student Government felt an obligation to inform itself
-        and the broader student body. This task force seeks to create greater
-        transparency for students and set a precedent for the Student
-        Government as a source of information that better informs students.
-        The process of reviewing, summarizing, and visualizing university
-        financial data has allowed us to answer many questions and explore new
-        topics that we wish to explore in the future.
-      </p>
-    </div>
-  </section>
-</body>
-
+    </section>
+  </body>
 </html>
