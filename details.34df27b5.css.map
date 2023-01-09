@@ -1,0 +1,1 @@
+{"mappings":"AACA;;AACA;;AAGA","sources":["src/css/main.css"],"sourcesContent":["/* purgecss start ignore */\n@tailwind base;\n@tailwind components;\n/* purgecss end ignore */\n\n@tailwind utilities;\n"],"names":[],"version":3,"file":"details.34df27b5.css.map","sourceRoot":"/__parcel_source_root/"}
