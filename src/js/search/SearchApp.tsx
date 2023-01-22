@@ -171,7 +171,7 @@ function SearchBox({ currentQuery, onUpdate, onSubmit }: SearchBoxProps) {
         value={currentQuery}
       />
       <button
-        className="p-2 text-white font-semibold bg-primary rounded-md hover:bg-black transition cursor-pointer disabled:cursor-not-allowed"
+        className="p-2 text-white font-semibold bg-primary disabled:bg-slate-200 disabled:text-slate-700 rounded-md hover:bg-black transition cursor-pointer disabled:cursor-not-allowed"
         onClick={handleSubmit}
         disabled={isDisabled}
       >
