@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Search by Department - UT Dallas Budget Breakdown</title>
+    <meta property="og:site_name" content="UTD Student Government" />
+    <meta
+      property="og:title"
+      content="Budget Search - University Budget Breakdown"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-01-22T14:15-0600" />
+    <meta property="article:modified_time" content="2023-01-22T14:15-0600" />
+    <meta property="article:author" content="UT Dallas Student Government" />
+
+    <meta
+      property="og:description"
+      content="Learn how your tuition funds university departments and the services that you use, and see clear, accessible information on the university's finances."
+    />
+    <meta
+      property="og:url"
+      content="https://utdal.github.io/sg-budget-breakdown"
+    />
+    <meta property="og:image" content="./img/sg-logo.jpg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/search/index.jsx" />
+  </head>
+
+  <body class="bg-slate-100">
+    <nav class="lg:flex bg-slate-700 text-white">
+      <a
+        href="./"
+        class="inline-block flex-1 p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        UTD Budget Breakdown
+      </a>
+      <a
+        href="./search.html"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        Search
+      </a>
+      <a
+        href="./index.html#findings"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        Findings
+      </a>
+      <a
+        href="./index.html#future"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        Future
+      </a>
+      <a
+        href="./team.html"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        People
+      </a>
+      <a
+        href="./details.html"
+        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+      >
+        Full Breakdown
+      </a>
+    </nav>
+    <section id="jumbotron" class="bg-primary text-white">
+      <div class="max-w-4xl mx-auto p-8 lg:py-16">
+        <div class="text-center text-4xl lg:text-left lg:text-6xl font-bold">
+          Search by Cost Center
+        </div>
+        <div class="mt-4 text-center text-2xl lg:text-left lg:text-4xl">
+          Look up funding for each department and program here.
+        </div>
+      </div>
+    </section>
+    <section id="searchRoot"></section>
+  </body>
+</html>
