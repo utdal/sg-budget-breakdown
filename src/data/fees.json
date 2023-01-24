@@ -177,7 +177,7 @@
             {
                 "name": "Year Experience Program",
                 "value": 103230
-            },
+            }
         ]
     },
     {
@@ -302,12 +302,53 @@
         ]
     },
     {
-        "name": "Advising",
-        "value": 15059797
+        "name": "IT",
+        "children": [
+            {
+                "name": "Media Services",
+                "value": 2586308 
+            },
+            {
+                "name": "Testing Center",
+                "value": 207306
+            },
+            {
+                "name": "Management Admin Staff",
+                "value": 1285232
+            },
+            {
+                "name": "FMS Finance Salary",
+                "value": 602346
+            },
+            {
+                "name": "Academic Support",
+                "value": 4241491
+            },
+            {
+                "name": "Institutional Support",
+                "value": 7113105
+            },
+            {
+                "name": "for Operations",
+                "value": 8597039
+            },
+            {
+                "name": "OIT Infrastructure",
+                "value": 636798
+            },
+            {
+                "name": "Info Security - IT Fee",
+                "value": 1264987
+            },
+            {
+                "name": "Other",
+                "value": 462972
+            }
+        ]
     },
     {
-        "name": "IT",
-        "value": 26997584
+        "name": "Advising",
+        "value": 15059797
     },
     {
         "name": "Infrastructure",
