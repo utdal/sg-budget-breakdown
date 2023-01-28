@@ -49,7 +49,7 @@ export default function SearchApp() {
   };
 
   const rows = filterResults(data, query).map((data) => {
-    return <TableRow data={data} />;
+    return <TableRow key={data.id} data={data} />;
   });
 
   return (
