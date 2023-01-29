@@ -337,22 +337,218 @@
                 "value": 636798
             },
             {
-                "name": "Info Security - IT Fee",
+                "name": "Info Security",
                 "value": 1264987
             },
             {
-                "name": "Other",
+                "name": "Reserve",
                 "value": 462972
             }
         ]
     },
     {
         "name": "Advising",
-        "value": 15059797
+        "children": [
+            {
+                "name": "Central UG Advising",
+                "value": 1082614 
+            },
+            {
+                "name": "Health Professional",
+                "value": 501328 
+            },
+            {
+                "name": "Legal Professional",
+                "value": 286885 
+            },
+            {
+                "name": "Gateways to Excellence in Math and Science (GEMS)",
+                "value": 1619423 
+            },
+            {
+                "name": "Dean of UG Education Operating",
+                "value": 336828 
+            },
+            {
+                "name": "A&H",
+                "value": 196530 
+            },
+            {
+                "name": "NSM",
+                "value": 794835 
+            },
+            {
+                "name": "EPPS",
+                "value": 551503 
+            },
+            {
+                "name": "JSOM",
+                "value": 2117186 
+            },
+            {
+                "name": "BBS Salaries",
+                "value": 704263 
+            },
+            {
+                "name": "BBS Operating",
+                "value": 40000 
+            },
+            {
+                "name": "GS",
+                "value": 426462 
+            },
+            {
+                "name": "ECS",
+                "value": 1517113 
+            },
+            {
+                "name": "ATEC UG",
+                "value": 520587 
+            },
+            {
+                "name": "ATEC Graduate",
+                "value": 177820 
+            },
+            {
+                "name": "Learning Resources",
+                "value": 224927 
+            },
+            {
+                "name": "Graduate Advising Dean",
+                "value": 335209 
+            },
+            {
+                "name": "Science Education",
+                "value": 68825 
+            },
+            {
+                "name": "MSE Graduate",
+                "value": 69608 
+            },
+            {
+                "name": "ECE Graduate",
+                "value": 195111 
+            },
+            {
+                "name": "BE Graduate",
+                "value": 69114 
+            },
+            {
+                "name": "ME Graduate",
+                "value": 129862 
+            },
+            {
+                "name": "CS Graduate",
+                "value": 392473 
+            },
+            {
+                "name": "SE Graduate",
+                "value": 67575 
+            },
+            {
+                "name": "Merit Pool",
+                "value": 583467 
+            },
+            {
+                "name": "Reserve",
+                "value": 2050249 
+            }]
     },
     {
         "name": "Infrastructure",
-        "value": 13640756
+        "children": [
+            {
+                "name": "A&H",
+                "value": 110000 
+            },
+            {
+                "name": "NSM",
+                "value": 277062 
+            },
+            {
+                "name": "Chemistry",
+                "value": 100000 
+            },
+            {
+                "name": "Geoscience",
+                "value": 75000 
+            },
+            {
+                "name": "Math",
+                "value": 50000 
+            },
+            {
+                "name": "TA Math & Science",
+                "value": 1442000 
+            },
+            {
+                "name": "Biology",
+                "value": 100000 
+            },
+            {
+                "name": "Physics",
+                "value": 75000 
+            },
+            {
+                "name": "NSM Science Education",
+                "value": 50000 
+            },
+            {
+                "name": "EPPS",
+                "value": 301789 
+            },
+            {
+                "name": "JSOM",
+                "value": 890883 
+            },
+            {
+                "name": "BBS",
+                "value": 531630 
+            },
+            {
+                "name": "NSC",
+                "value": 17000 
+            },
+            {
+                "name": "PSY",
+                "value": 6000
+            },
+            {
+                "name": "SLH",
+                "value": 20000 
+            },
+            {
+                "name": "GS",
+                "value": 30000 
+            },
+            {
+                "name": "ECS DOE",
+                "value": 50000 
+            },
+            {
+                "name": "ECS Lab",
+                "value": 5000 
+            },
+            {
+                "name": "ATEC",
+                "value": 441527 
+            },
+            {
+                "name": "Information Security",
+                "value": 534335 
+            },
+            {
+                "name": "Maintenance",
+                "value": 579301 
+            },
+            {
+                "name": "Merit Pool",
+                "value": 85592 
+            },
+            {
+                "name": "Reserve",
+                "value": 7868637 
+            }]
     },
     {
         "name": "Library Aquisitions",
