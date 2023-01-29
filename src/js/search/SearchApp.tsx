@@ -9,11 +9,11 @@ const DEFAULT_YEAR = 2023;
  * @returns The cost center for the given fiscal year.
  */
 function getData(year: number = DEFAULT_YEAR) {
-  return [1, 2, 3, 4, 5].map((data) => {
+  return [...Array(100).keys()].map((data) => {
     const expenses = Math.random() * 10000;
     return {
       id: data,
-      name: `Test Cost Center ${data}`,
+      name: `Test Cost Center ${data + Math.floor(data * 10 * Math.random())}`,
       expenses: expenses,
       revenue: Math.random() + expenses,
     };
@@ -22,12 +22,80 @@ function getData(year: number = DEFAULT_YEAR) {
 
 function filterResults(data: CostCenterInfo[], query: string) {
   return data.filter(({ id, name, expenses, revenue }) => {
+    const normalizedQuery = query.toLocaleLowerCase();
     return (
-      name.startsWith(query) ||
-      String(id).startsWith(query) ||
-      String(id).endsWith(query)
+      name.toLowerCase().startsWith(normalizedQuery) ||
+      name.toLowerCase().indexOf(normalizedQuery) >= 0 ||
+      String(id).startsWith(normalizedQuery) ||
+      String(id).endsWith(normalizedQuery)
     );
   });
+}
+
+/**
+ * Options used to filter and query searches.
+ */
+interface SearchSettings {
+  sortBy: keyof CostCenterInfo;
+}
+
+/**
+ * Sort the given data by a cost center attribute.
+ *
+ * @param table The data to sort
+ * @param param1 options used to sort the data
+ * @returns A function that can be used to sort the data by the given key.
+ */
+function getSortFunction(settings: SearchSettings | null = null) {
+  if (!settings) {
+    return undefined;
+  }
+  const { sortBy } = settings;
+  return (first: CostCenterInfo, second: CostCenterInfo) => {
+    return first[sortBy] > second[sortBy] ? 1 : -1;
+  };
+}
+
+interface TableSortHeaderProps {
+  id: string;
+  label: string;
+  onOptionClicked: (id: string) => void;
+  active: boolean;
+  isPrimary?: boolean;
+}
+
+function TableSortColumnHeader({
+  id,
+  label,
+  onOptionClicked,
+  active,
+  isPrimary = false,
+}: TableSortHeaderProps) {
+  return (
+    <th className={"p-4 space-x-4 " + (isPrimary ? "text-right" : "text-left")}>
+      <span>{label}</span>
+      <div
+        className={
+          "inline hover:bg-slate-300 transition rounded-lg p-1 cursor-pointer " +
+          (active ? "bg-blue-200" : "bg-slate-200")
+        }
+        onClick={() => onOptionClicked(id)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="inline w-5 h-5"
+        >
+          <path
+            fillRule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div>
+    </th>
+  );
 }
 
 /**
@@ -36,6 +104,8 @@ function filterResults(data: CostCenterInfo[], query: string) {
 export default function SearchApp() {
   const [query, setQuery] = useState("");
   const [data, setData] = useState<CostCenterInfo[]>([]);
+  const [sortBySelection, setSortBySelection] =
+    useState<keyof CostCenterInfo>("id");
 
   const handleSubmit = () => { };
 
@@ -48,34 +118,61 @@ export default function SearchApp() {
     setQuery(newQuery);
   };
 
-  const rows = filterResults(data, query).map((data) => {
-    return <TableRow key={data.id} data={data} />;
-  });
+  const handleSortOptionClicked = (id: string) => {
+    // TODO: Fix potential edge case
+    setSortBySelection(id as keyof CostCenterInfo);
+  };
+
+  const rows = filterResults(data, query)
+    .sort(getSortFunction({ sortBy: sortBySelection }))
+    .map((data) => {
+      return <TableRow key={data.id} data={data} />;
+    });
 
   return (
     <div className="max-w-4xl mx-auto m-4 rounded-lg bg-white shadow-md">
-      <SearchBox
-        currentQuery={query}
-        onUpdate={handleUpdate}
-        onSubmit={handleSubmit}
-      />
-      <div className="mt-2 px-2">
+      <div className="pt-1 px-2 sticky top-0 bg-white rounded-lg">
+        <SearchBox
+          currentQuery={query}
+          onUpdate={handleUpdate}
+          onSubmit={handleSubmit}
+        />
         <span className="italic text-sm">
           Showing data for fiscal year 2023 (ending August 31, 2023)
         </span>
       </div>
-      <table className="w-full mt-4 table-fixed">
-        <thead className="p-4 bg-gray-200">
-          <tr>
-            <th className="p-4">Cost Center #</th>
-            <th className="p-4 text-left">Name</th>
-            <th className="p-4 text-left">Expenses</th>
-            <th className="p-4 text-left">Revenue</th>
+      <table className="w-full mt-4">
+        <thead className="w-full p-4 bg-gray-100 sticky top-16">
+          <tr className="w-full">
+            <TableSortColumnHeader
+              id="id"
+              label="Cost Center #"
+              onOptionClicked={handleSortOptionClicked}
+              active={sortBySelection == "id"}
+              isPrimary
+            />
+            <TableSortColumnHeader
+              id="name"
+              label="Name"
+              onOptionClicked={handleSortOptionClicked}
+              active={sortBySelection == "name"}
+            />
+            <TableSortColumnHeader
+              id="revenue"
+              label="Revenue"
+              onOptionClicked={handleSortOptionClicked}
+              active={sortBySelection == "revenue"}
+            />
+            <TableSortColumnHeader
+              id="expenses"
+              label="Expenses"
+              onOptionClicked={handleSortOptionClicked}
+              active={sortBySelection == "expenses"}
+            />
           </tr>
         </thead>
         <tbody>{rows}</tbody>
       </table>
-      <tbody></tbody>
     </div>
   );
 }
@@ -84,6 +181,9 @@ interface TableRowProps {
   data: CostCenterInfo;
 }
 
+/**
+ * A row of this table that shows cost center information.
+ */
 function TableRow({ data: { id, name, expenses, revenue } }: TableRowProps) {
   return (
     <tr className="border-slate-200 border-b-[1px]">
@@ -105,6 +205,9 @@ function TableRow({ data: { id, name, expenses, revenue } }: TableRowProps) {
   );
 }
 
+/**
+ * Accounting data corresponding to a cost center.
+ */
 type CostCenterInfo = {
   /**
    * The cost center number.
@@ -148,6 +251,9 @@ interface SearchBoxProps {
   onSubmit: () => void;
 }
 
+/**
+ * A search box with callbacks for query updates.
+ */
 function SearchBox({ currentQuery, onUpdate, onSubmit }: SearchBoxProps) {
   const handleUpdate = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
@@ -167,6 +273,7 @@ function SearchBox({ currentQuery, onUpdate, onSubmit }: SearchBoxProps) {
         type="text"
         name="searchQuery"
         id="searchQuery"
+        placeholder="Search by cost center number or title"
         onChange={handleUpdate}
         value={currentQuery}
       />
