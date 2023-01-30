@@ -4,9 +4,9 @@
     "start": "parcel ./src/*.html",
     "prebuild-dev": "shx rm -rf dist/*",
     "build-dev": "parcel build ./src/*.html --no-optimize",
-    "prebuild": "shx rm -rf dist/*",
-    "build": "parcel build ./src/*.html --public-url ./sg-budget-breakdown",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "predeploy": "shx rm -rf dist/*",
+    "deploy": "parcel build ./src/*.html --public-url ./sg-budget-breakdown",
+    "postdeploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
     "parcel": "^2.8.3",
