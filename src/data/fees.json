@@ -551,12 +551,36 @@
             }]
     },
     {
-        "name": "Library Aquisitions",
-        "value": 9933998
+        "name": "Library",
+        "children": [
+            {
+                "name": "Aquisitions Central",
+                "value": 5296623 
+            },
+            {
+                "name": "Salaries",
+                "value": 3956716 
+            },
+            {
+                "name": "Operating",
+                "value": 340952 
+            },
+            {
+                "name": "Reserve",
+                "value": 339707 
+            }]
     },
     {
         "name": "Transporation",
-        "value": 1143148
+        "children": [
+            {
+                "name": "Service",
+                "value": 915110 
+            },
+            {
+                "name": "Reserve",
+                "value": 235038 
+            }]
     },
     {
         "name": "Student Business Services",
