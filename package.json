@@ -1,11 +1,11 @@
 {
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel src/***.html",
     "prebuild-dev": "shx rm -rf dist/*",
-    "build-dev": "parcel build src/index.html --no-optimize",
+    "build-dev": "parcel build src/***.html --no-optimize",
     "prebuild": "shx rm -rf dist/*",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/***.html",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
