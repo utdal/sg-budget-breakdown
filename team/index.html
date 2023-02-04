@@ -25,42 +25,60 @@
     <meta property="og:image" content="../../src/img/sg-logo.jpg" />
 
     <link rel="stylesheet" href="../src/main.css" />
-
-    <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
 
   <body class="bg-slate-100">
-    <nav class="sticky top-0 lg:flex bg-slate-700 text-white">
+    <nav class="sticky top-0 flex flex-wrap bg-slate-700 text-white">
       <a
-        href="/"
+        href="../index.html"
         class="inline-block flex-1 p-4 hover:bg-slate-900 focus:bg-slate-900 font-bold text-lg transition"
       >
         UTD Budget Breakdown
       </a>
-      <a
-        href="../../../index.html#findings"
-        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
-      >
-        Findings
-      </a>
-      <a
-        href="../../../index.html#future"
-        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
-      >
-        Future
-      </a>
-      <a
-        href="../team/index.html"
-        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
-      >
-        People
-      </a>
-      <a
-        href="../details/index.html"
-        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
-      >
-        Full Breakdown
-      </a>
+      <button type="button" class="md:hidden p-2 mr-2 rounded-lg hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200" id="navbar-open" aria-controls="navbar-open" aria-expanded="false" onClick="open_nav()">
+        <span class="sr-only">Open menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <button type="button" style="font-size:2rem;" class="hidden p-1 mr-4 rounded-lg hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200" id="navbar-close" aria-controls="navbar-close" aria-expanded="false" onClick="close_nav()">
+        <span class="sr-only">Open menu</span>
+        &times;
+      </button>
+      <div class="hidden md:block p-4 pt-0 md:p-4" id="navbar-nav">
+        <ul class="flex flex-col md:flex-row">
+          <li>
+            <a
+              href="../index.html#findings"
+              class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
+            >
+              Findings
+            </a>
+          </li>
+          <li>
+            <a
+              href="../index.html#future"
+              class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
+            >
+              Future
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
+            >
+              People
+            </a>
+          </li>
+          <li>
+            <a
+              href="../details/index.html"
+              class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
+            >
+              Full Breakdown
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <section id="jumbotron" class="bg-[#e87500] text-white">
       <div class="max-w-4xl mx-auto p-8 lg:py-16">
@@ -86,7 +104,7 @@
                 alt="Head shot of Griffin Davis"
               />
               <div class="text-2xl font-bold text-center">
-                <a href="https://gcd.vc">Griffin Davis</a>
+                <a href="https://gcd.dev">Griffin Davis</a>
               </div>
               <div class="text-xl text-center">At-Large Senator</div>
               <div class="italics text-center">
@@ -179,5 +197,6 @@
         </div>
       </div>
     </section>
+    <script src="./src/main.js"></script>
   </body>
 </html>
