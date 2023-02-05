@@ -29,20 +29,64 @@
 
   <body class="bg-slate-100">
     <nav class="sticky top-0 flex flex-wrap bg-slate-700 text-white">
-      <a
-        href="../index.html"
-        class="inline-block flex-1 p-4 hover:bg-slate-900 focus:bg-slate-900 font-bold text-lg transition"
-      >
-        UTD Budget Breakdown
-      </a>
-      <button type="button" class="md:hidden p-2 mr-2 rounded-lg hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200" id="navbar-open" aria-controls="navbar-open" aria-expanded="false" onClick="open_nav()">
-        <span class="sr-only">Open menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-      </button>
-      <button type="button" style="font-size:2rem;" class="hidden p-1 mr-4 rounded-lg hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200" id="navbar-close" aria-controls="navbar-close" aria-expanded="false" onClick="close_nav()">
-        <span class="sr-only">Open menu</span>
-        &times;
-      </button>
+      <div class="w-full md:flex-1 md:w-auto flex justify-between">
+        <a
+          href="/"
+          class="flex-1 p-4 hover:bg-slate-900 focus:bg-slate-900 font-bold text-lg transition"
+        >
+          UTD Budget Breakdown
+        </a>
+        <div class="p-2">
+          <button
+            type="button"
+            class="block md:hidden p-2 rounded-lg hover:bg-slate-900 focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            id="navbar-open"
+            aria-controls="navbar-open"
+            aria-expanded="false"
+            onClick="open_nav()"
+          >
+            <span class="sr-only">Open menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="hidden p-2 rounded-lg hover:bg-slate-900 focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200 text-[2rem]"
+            id="navbar-close"
+            aria-controls="navbar-close"
+            aria-expanded="false"
+            onClick="close_nav()"
+          >
+            <span class="sr-only">Close menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+              aria-hidden="false"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
       <div class="hidden md:block p-4 pt-0 md:p-4" id="navbar-nav">
         <ul class="flex flex-col md:flex-row">
           <li>
@@ -71,7 +115,7 @@
           </li>
           <li>
             <a
-              href="#"
+              href="../details/index.html"
               class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
             >
               Full Breakdown
@@ -206,16 +250,16 @@
                 href="https://utdallas.qualtrics.com/jfe/form/SV_6EVjLleavr4RCzI"
                 >form</a
               >
-              by <b>Tuesday, Feburary 28th, 2023 at 11:59 PM</b>. Provide as much
-              information as you can when describing your interest in the task
-              force.
+              by <b>Tuesday, Feburary 28th, 2023 at 11:59 PM</b>. Provide as
+              much information as you can when describing your interest in the
+              task force.
             </p>
           </div>
           <div>
             <h2 class="mt-2 text-2xl">Wait a bit</h2>
             <p class="mt-2 text-lg">
-              The SG President, Kruthi Kanduri, will let you know if you are invited to join the
-              task force.
+              The SG President, Kruthi Kanduri, will let you know if you are
+              invited to join the task force.
             </p>
           </div>
           <div>
