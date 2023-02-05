@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* faq */
+#faq-open {
+    cursor: pointer;
+}
+#faq-close {
+    cursor: pointer;
+}
+#faq-item {
+    margin-bottom: 0.5rem;
+}
