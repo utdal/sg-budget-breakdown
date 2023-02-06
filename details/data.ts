@@ -1,12 +1,17 @@
-import sankey_top from '../data/top_level.json';
-import sankey_instruction from '../data/ed-gen-funds_instruction.json';
-import sankey_operations from '../data/ed-gen-funds_oper_main.json';
-import treemap_insti_supp from '../data/ed-gen-funds_insti_supp.json';  
-import treemap_fees from '../data/fees.json';
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+
+import sankey_top from '../src/data/top_level.json';
+import sankey_instruction from '../src/data/ed-gen-funds_instruction.json';
+import sankey_operations from '../src/data/ed-gen-funds_oper_main.json';
+import treemap_insti_supp from '../src/data/ed-gen-funds_insti_supp.json';
+import treemap_fees from '../src/data/fees.json';
+
 
 am4core.useTheme(am4themes_animated);
 
-function buildSankey(divName, data, padRight) {
+function buildSankey(divName: string, data: any[], padRight: number) {
     let chart = am4core.create(divName, am4charts.SankeyDiagram);
     chart.data = data;
     chart.dataFields.fromName = "from";
@@ -22,7 +27,7 @@ function buildSankey(divName, data, padRight) {
     chart.nodes.template.nameLabel.label.wrap = false;
 }
 
-function buildTreeMap(divName, data) {
+function buildTreeMap(divName: string, data: any[]) {
     var chart = am4core.create(divName, am4charts.TreeMap);
     chart.data = data;
 
@@ -47,7 +52,7 @@ function buildTreeMap(divName, data) {
     let level1 = chart.seriesTemplates.create("1");
     let level1_column = level1.columns.template;
     level1_column.fillOpacity = 0;
-    
+
     let level0_bullet = level0.bullets.push(new am4charts.LabelBullet());
     level0_bullet.locationY = 0.5;
     level0_bullet.locationX = 0.5;

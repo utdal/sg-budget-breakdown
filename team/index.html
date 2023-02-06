@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Team - UT Dallas Budget Breakdown</title>
+    <link rel="icon" href="/favicon.ico" />
     <meta property="og:site_name" content="UTD Student Government" />
     <meta property="og:title" content="Team - University Budget Breakdown" />
     <meta property="og:type" content="article" />
@@ -21,44 +22,42 @@
       property="og:url"
       content="https://utdal.github.io/sg-budget-breakdown/team"
     />
-    <meta property="og:image" content="./img/sg-logo.jpg" />
+    <meta property="og:image" content="../../src/img/sg-logo.jpg" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../src/main.css" />
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
 
   <body class="bg-slate-100">
-    <nav class="lg:flex bg-slate-700 text-white">
+    <nav class="sticky top-0 lg:flex bg-slate-700 text-white">
       <a
-        href="./"
-        class="inline-block flex-1 p-4 hover:bg-slate-900 font-bold text-lg transition"
+        href="/"
+        class="inline-block flex-1 p-4 hover:bg-slate-900 focus:bg-slate-900 font-bold text-lg transition"
       >
         UTD Budget Breakdown
       </a>
       <a
-        href="./index.html#findings"
-        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+        href="../../../index.html#findings"
+        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
       >
         Findings
       </a>
       <a
-        href="./index.html#future"
-        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+        href="../../../index.html#future"
+        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
       >
         Future
       </a>
       <a
-        href="./team.html"
-        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+        href="../team/index.html"
+        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
       >
         People
       </a>
       <a
-        href="./details.html"
-        class="p-4 hover:bg-slate-900 font-bold text-lg transition"
+        href="../details/index.html"
+        class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
       >
         Full Breakdown
       </a>
@@ -83,33 +82,35 @@
             <div class="space-y-2">
               <img
                 class="object-cover aspect-square"
-                src="./img/team/about-andres.jpg"
-                alt="Head shot of Andres Andujar"
-              />
-              <div class="text-2xl font-bold text-center">Andres Andujar</div>
-              <div class="text-xl text-center">Graduate Senator</div>
-              <div class="italics text-center">Task Force Chair</div>
-            </div>
-          </article>
-          <article class="py-2">
-            <div class="space-y-2">
-              <img
-                class="object-cover aspect-square"
-                src="./img/team/about-griffin.jpg"
+                src="../src/img/team/about-griffin.jpg"
                 alt="Head shot of Griffin Davis"
               />
               <div class="text-2xl font-bold text-center">
                 <a href="https://gcd.vc">Griffin Davis</a>
               </div>
               <div class="text-xl text-center">At-Large Senator</div>
-              <div class="italics text-center">Visualizations Lead</div>
+              <div class="italics text-center">
+                Task Force Chair, Visualizations Lead
+              </div>
             </div>
           </article>
           <article class="py-2">
             <div class="space-y-2">
               <img
                 class="object-cover aspect-square"
-                src="./img/team/about-willie.jpg"
+                src="../src/img/team/about-andres.jpg"
+                alt="Head shot of Andres Andujar"
+              />
+              <div class="text-2xl font-bold text-center">Andres Andujar</div>
+              <div class="text-xl text-center">Graduate Senator</div>
+              <div class="italics text-center">Budget Researcher</div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../src/img/team/about-willie.jpg"
                 alt="Student Government logo placeholder"
               />
               <div class="text-2xl font-bold text-center">
@@ -123,7 +124,7 @@
             <div class="space-y-2">
               <img
                 class="object-cover aspect-square"
-                src="./img/team/about-margaret.jpg"
+                src="../src/img/team/about-margaret.jpg"
                 alt="Student Government logo placeholder"
               />
               <div class="text-2xl font-bold text-center">Margaret Moore</div>
@@ -137,7 +138,7 @@
             <div class="space-y-2">
               <img
                 class="object-cover aspect-square"
-                src="./img/team/about-koti.jpg"
+                src="../src/img/team/about-koti.jpg"
                 alt="Head shot of Koti Gangasani"
               />
               <div class="text-2xl font-bold text-center">
@@ -151,7 +152,7 @@
             <div class="space-y-2">
               <img
                 class="object-cover aspect-square"
-                src="./img/team/about-leah.jpg"
+                src="../src/img/team/about-leah.jpg"
                 alt="Head shot of Leah Sullivan"
               />
               <div class="text-2xl font-bold text-center">Leah Sullivan</div>
@@ -163,8 +164,8 @@
             <div class="space-y-2">
               <img
                 class="object-cover aspect-square"
-                src="./img/sg-logo.jpg"
-                alt="Head shot of Leah Sullivan"
+                src="../src/img/sg-logo.jpg"
+                alt="Placeholder headshot"
               />
               <div class="text-2xl font-bold text-center">
                 Hamza Zulquernain
