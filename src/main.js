@@ -9,3 +9,6 @@ function close_nav() {
     document.getElementById("navbar-open").classList.remove("hidden");
     document.getElementById("navbar-close").classList.add("hidden");
 }
+
+window.open_nav = open_nav;
+window.close_nav = close_nav;
