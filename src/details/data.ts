@@ -2,11 +2,11 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
-import sankey_top from '../src/data/top_level.json';
-import sankey_instruction from '../src/data/ed-gen-funds_instruction.json';
-import sankey_operations from '../src/data/ed-gen-funds_oper_main.json';
-import treemap_insti_supp from '../src/data/ed-gen-funds_insti_supp.json';
-import treemap_fees from '../src/data/fees.json';
+import sankey_top from '../data/top_level.json';
+import sankey_instruction from '../data/ed-gen-funds_instruction.json';
+import sankey_operations from '../data/ed-gen-funds_oper_main.json';
+import treemap_insti_supp from '../data/ed-gen-funds_insti_supp.json';
+import treemap_fees from '../data/fees.json';
 
 
 am4core.useTheme(am4themes_animated);
