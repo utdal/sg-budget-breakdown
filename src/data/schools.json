@@ -1,0 +1,374 @@
+[
+    {
+        "category": "JSOM",
+        "value": 67769456,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 24583939
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 6323404
+            },
+            {
+                "category": "Dean's office",
+                "value": 1521377
+            },
+            {
+                "category": "JSOM FS",
+                "value": 20739749
+            },
+            {
+                "category": "Undergraduate advising",
+                "value": 2117186
+            },
+            {
+                "category": "Infrastructure",
+                "value": 890883
+            },
+            {
+                "category": "Dean's Excel Scholars",
+                "value": 2100000
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 2452728
+            },
+            {
+                "category": "Research",
+                "value": 2523329
+            },
+            {
+                "category": "Research",
+                "value": 2523329
+            },
+            {
+                "category": "JSOM NTT",
+                "value": 1527384
+            },
+            {
+                "category": "Other",
+                "value": 1697843
+            }
+        ]
+    },
+    {
+        "category": "EPPS",
+        "value": 14124201,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 7068683
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 2071735
+            },
+            {
+                "category": "Research support",
+                "value": 948690
+            },
+            {
+                "category": "Dean's office operating",
+                "value": 446690
+            },
+            {
+                "category": "Infrastructure",
+                "value": 301789
+            },
+            {
+                "category": "Undergraduate advising",
+                "value": 551503
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 1485568
+            },
+            {
+                "category": "Graduate program admin salary",
+                "value": 323520
+            },
+            {
+                "category": "Other",
+                "value": 864230
+            }
+        ]
+    },
+    {
+        "category": "A&H",
+        "value": 12472283,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 7311836
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 2508065
+            },
+            {
+                "category": "Dean's office operating",
+                "value": 223580
+            },
+            {
+                "category": "A&H FS",
+                "value": 1230923
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 652839
+            },
+            {
+                "category": "Undergraduate advising",
+                "value": 196530
+            },
+            {
+                "category": "Infrastructure",
+                "value": 110000
+            },
+            {
+                "category": "Other",
+                "value": 238510
+            }
+        ]
+    },
+    {
+        "category": "ATEC",
+        "value": 9448448,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 4001011
+            },
+            {
+                "category": "Teaching assistants",
+                "value": 567175
+            },
+            {
+                "category": "Administrative and operating",
+                "value": 592133
+            },
+            {
+                "category": "Advising",
+                "value": 698407
+            },
+            {
+                "category": "ATEC FS",
+                "value": 1324789
+            },
+            {
+                "category": "Infrastructure",
+                "value": 441527
+            },
+            {
+                "category": "Undergraduate support",
+                "value": 934221
+            },
+            {
+                "category": "Graduate support",
+                "value": 38820
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 670619
+            },
+            {
+                "category": "Other",
+                "value": 179746
+            }
+        ]
+    },
+    {
+        "category": "NSM",
+        "value": 120,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 19101527
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 7346087
+            },
+            {
+                "category": "Research",
+                "value": 1505637
+            },
+            {
+                "category": "Dean's office operating",
+                "value": 1612865
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 759688
+            },
+            {
+                "category": "Undergraduate advising",
+                "value": 794835
+            },
+            {
+                "category": "IDC earnings",
+                "value": 1618466
+            },
+            {
+                "category": "Operating",
+                "value": 626360
+            },
+            {
+                "category": "NSM FS",
+                "value": 665750
+            },
+            {
+                "category": "Infrastructure",
+                "value": 727062
+            },
+            {
+                "category": "Hanson Center",
+                "value": 159874
+            },
+            {
+                "category": "RKDA",
+                "value": 236293
+            }
+        ]
+    },
+    {
+        "category": "ECS",
+        "value": 64307036,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 25116636
+            },
+            {
+                "category": "Research",
+                "value": 1110049
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 15097940
+            },
+            {
+                "category": "ECS FS",
+                "value": 9198058
+            },
+            {
+                "category": "Texas Analog Center",
+                "value": 627976
+            },
+            {
+                "category": "Dean's office",
+                "value": 3713071
+            },
+            {
+                "category": "Infrastructure",
+                "value": 1433836
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 1786379
+            },
+            {
+                "category": "Operating",
+                "value": 776402
+            },
+            {
+                "category": "Tuition reserve",
+                "value": 800928
+            },
+            {
+                "category": "Undergraduate advising",
+                "value": 1517113
+            },
+            {
+                "category": "Graduate advising",
+                "value": 923743
+            },
+            {
+                "category": "Other",
+                "value": 2204905
+            }
+        ]
+    },
+    {
+        "category": "BBS",
+        "value": 18132384,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 9005558
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 4012876
+            },
+            {
+                "category": "Research",
+                "value": 1040339
+            },
+            {
+                "category": "Dean's salary",
+                "value": 497540
+            },
+            {
+                "category": "BBS FS",
+                "value": 350928
+            },
+            {
+                "category": "Advising",
+                "value": 744263
+            },
+            {
+                "category": "IDC earnings",
+                "value": 1615109
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 270235
+            },
+            {
+                "category": "Infrastructure",
+                "value": 531630
+            },
+            {
+                "category": "Other",
+                "value": 63906
+            }
+        ]
+    },
+    {
+        "category": "IS",
+        "value": 3860958,
+        "breakdown": [
+            {
+                "category": "Salaries and wages",
+                "value": 1274151
+            },
+            {
+                "category": "Dean's office operating",
+                "value": 501823
+            },
+            {
+                "category": "Academic Bridge Program",
+                "value": 700530
+            },
+            {
+                "category": "Teach Ed",
+                "value": 500898
+            },
+            {
+                "category": "Infrastructure",
+                "value": 30000
+            },
+            {
+                "category": "Undergraduate advising",
+                "value": 426462
+            },
+            {
+                "category": "IS FS",
+                "value": 427094
+            }
+        ]
+    }
+]
