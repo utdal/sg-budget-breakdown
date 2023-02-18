@@ -23,7 +23,7 @@ function buildSankey(divName: string, data: any[]) {
           sourceIdField: "from",
           targetIdField: "to",
           valueField: "value",
-          paddingRight: 60
+          paddingRight: 200
         })
     );
     // Add data from object
@@ -149,22 +149,23 @@ function buildPie(divName: string, data: any[]) {
     columnChart.appear(1000, 100);
     let pieChart = container.children.push(
         am5percent.PieChart.new(root, {
-          width: am5.p50,
-          innerRadius: am5.percent(50)
+            width: am5.p50,
+            innerRadius: am5.percent(50)
         })
       );
       
     // Create series
     let pieSeries = pieChart.series.push(
-    am5percent.PieSeries.new(root, {
-        valueField: "value",
-        categoryField: "category"
-    })
+        am5percent.PieSeries.new(root, {
+            valueField: "value",
+            categoryField: "category",
+            alignLabels: false
+        })
     );
     
     pieSeries.slices.template.setAll({
-    templateField: "sliceSettings",
-    strokeOpacity: 0
+        templateField: "sliceSettings",
+        strokeOpacity: 0
     });
     
     let currentSlice: am5.Slice | undefined;
@@ -193,8 +194,14 @@ function buildPie(divName: string, data: any[]) {
         currentSlice = slice;
     });
     
-    pieSeries.labels.template.set("forceHidden", true);
+
     pieSeries.ticks.template.set("forceHidden", true);
+    pieSeries.labels.template.setAll({
+        textType: "circular",
+        centerX: 0,
+        centerY: 0,
+        text: "{category}"
+    });
     
     pieSeries.data.setAll(data);
     
@@ -208,11 +215,11 @@ function buildPie(divName: string, data: any[]) {
     }));
     
     let label2 = pieChart.seriesContainer.children.push(am5.Label.new(root, {
-    text: "",
-    fontSize: 12,
-    centerX: am5.p50,
-    centerY: am5.p50,
-    dy: 30
+        text: "",
+        fontSize: 12,
+        centerX: am5.p50,
+        centerY: am5.p50,
+        dy: 30
     }));
     
     // Pre-select first slice

@@ -1,47 +1,5 @@
 [
   {
-    "from": "Adjustments",
-    "to": "Educational and General",
-    "value": 22024442.73,
-    "sub": []
-  },
-  {
-    "from": "Adjustments",
-    "to": "Designated",
-    "value": 107852933.32,
-    "sub": []
-  },
-  {
-    "from": "Adjustments",
-    "to": "Auxiliary",
-    "value": 632463.0,
-    "sub": []
-  },
-  {
-    "from": "Adjustments",
-    "to": "Restricted",
-    "value": 38718937.94,
-    "sub": []
-  },
-  {
-    "from": "Designated",
-    "to": "Adjustments (Out)",
-    "value": 1786830.22,
-    "sub": []
-  },
-  {
-    "from": "Auxiliary",
-    "to": "Adjustments (Out)",
-    "value": 1733097.87,
-    "sub": []
-  },
-  {
-    "from": "Restricted",
-    "to": "Adjustments (Out)",
-    "value": 11163.9,
-    "sub": []
-  },
-  {
     "from": "AUF/Approp. Transfers Received",
     "to": "Educational and General",
     "value": 6379791,

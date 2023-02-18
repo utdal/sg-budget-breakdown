@@ -4,21 +4,14 @@
         "value": 67769456,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 24583939
-            },
-            {
-                "category": "Teaching and research assistants",
-                "value": 6323404
+                "category": "Other",
+                "value": 1697843
             },
             {
                 "category": "Dean's office",
                 "value": 1521377
             },
-            {
-                "category": "JSOM FS",
-                "value": 20739749
-            },
+            
             {
                 "category": "Undergraduate advising",
                 "value": 2117186
@@ -40,16 +33,20 @@
                 "value": 2523329
             },
             {
-                "category": "Research",
-                "value": 2523329
-            },
-            {
                 "category": "JSOM NTT",
                 "value": 1527384
             },
             {
-                "category": "Other",
-                "value": 1697843
+                "category": "Teaching and research assistants",
+                "value": 6323404
+            },
+            {
+                "category": "JSOM FS",
+                "value": 20739749
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 24583939
             }
         ]
     },
@@ -58,16 +55,8 @@
         "value": 14124201,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 7068683
-            },
-            {
-                "category": "Teaching and research assistants",
-                "value": 2071735
-            },
-            {
-                "category": "Research support",
-                "value": 948690
+                "category": "Other",
+                "value": 864230
             },
             {
                 "category": "Dean's office operating",
@@ -81,17 +70,26 @@
                 "category": "Undergraduate advising",
                 "value": 551503
             },
-            {
-                "category": "T/TT faculty salary reserve",
-                "value": 1485568
-            },
+            
             {
                 "category": "Graduate program admin salary",
                 "value": 323520
             },
             {
-                "category": "Other",
-                "value": 864230
+                "category": "Research support",
+                "value": 948690
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 2071735
+            },
+            {
+                "category": "T/TT faculty salary reserve",
+                "value": 1485568
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 7068683
             }
         ]
     },
@@ -100,20 +98,12 @@
         "value": 12472283,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 7311836
-            },
-            {
-                "category": "Teaching and research assistants",
-                "value": 2508065
+                "category": "Other",
+                "value": 238510
             },
             {
                 "category": "Dean's office operating",
                 "value": 223580
-            },
-            {
-                "category": "A&H FS",
-                "value": 1230923
             },
             {
                 "category": "T/TT faculty salary reserve",
@@ -128,8 +118,16 @@
                 "value": 110000
             },
             {
-                "category": "Other",
-                "value": 238510
+                "category": "A&H FS",
+                "value": 1230923
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 2508065
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 7311836
             }
         ]
     },
@@ -138,8 +136,8 @@
         "value": 9448448,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 4001011
+                "category": "Other",
+                "value": 179746
             },
             {
                 "category": "Teaching assistants",
@@ -150,20 +148,8 @@
                 "value": 592133
             },
             {
-                "category": "Advising",
-                "value": 698407
-            },
-            {
-                "category": "ATEC FS",
-                "value": 1324789
-            },
-            {
                 "category": "Infrastructure",
                 "value": 441527
-            },
-            {
-                "category": "Undergraduate support",
-                "value": 934221
             },
             {
                 "category": "Graduate support",
@@ -174,22 +160,30 @@
                 "value": 670619
             },
             {
-                "category": "Other",
-                "value": 179746
+                "category": "Advising",
+                "value": 698407
+            },
+            {
+                "category": "Undergraduate support",
+                "value": 934221
+            },
+            {
+                "category": "ATEC FS",
+                "value": 1324789
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 4001011
             }
         ]
     },
     {
         "category": "NSM",
-        "value": 120,
+        "value": 35223269,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 19101527
-            },
-            {
-                "category": "Teaching and research assistants",
-                "value": 7346087
+                "category": "Other",
+                "value": 1061917
             },
             {
                 "category": "Research",
@@ -216,20 +210,17 @@
                 "value": 626360
             },
             {
-                "category": "NSM FS",
-                "value": 665750
-            },
-            {
                 "category": "Infrastructure",
                 "value": 727062
             },
+            
             {
-                "category": "Hanson Center",
-                "value": 159874
+                "category": "Teaching and research assistants",
+                "value": 7346087
             },
             {
-                "category": "RKDA",
-                "value": 236293
+                "category": "Salaries and wages",
+                "value": 19101527
             }
         ]
     },
@@ -238,20 +229,8 @@
         "value": 64307036,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 25116636
-            },
-            {
-                "category": "Research",
-                "value": 1110049
-            },
-            {
-                "category": "Teaching and research assistants",
-                "value": 15097940
-            },
-            {
-                "category": "ECS FS",
-                "value": 9198058
+                "category": "Other",
+                "value": 2204905
             },
             {
                 "category": "Texas Analog Center",
@@ -286,8 +265,20 @@
                 "value": 923743
             },
             {
-                "category": "Other",
-                "value": 2204905
+                "category": "ECS FS",
+                "value": 9198058
+            },
+            {
+                "category": "Research",
+                "value": 1110049
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 15097940
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 25116636
             }
         ]
     },
@@ -296,16 +287,8 @@
         "value": 18132384,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 9005558
-            },
-            {
-                "category": "Teaching and research assistants",
-                "value": 4012876
-            },
-            {
-                "category": "Research",
-                "value": 1040339
+                "category": "Other",
+                "value": 63906
             },
             {
                 "category": "Dean's salary",
@@ -319,10 +302,7 @@
                 "category": "Advising",
                 "value": 744263
             },
-            {
-                "category": "IDC earnings",
-                "value": 1615109
-            },
+            
             {
                 "category": "T/TT faculty salary reserve",
                 "value": 270235
@@ -332,8 +312,20 @@
                 "value": 531630
             },
             {
-                "category": "Other",
-                "value": 63906
+                "category": "IDC earnings",
+                "value": 1615109
+            },
+            {
+                "category": "Research",
+                "value": 1040339
+            },
+            {
+                "category": "Teaching and research assistants",
+                "value": 4012876
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 9005558
             }
         ]
     },
@@ -342,8 +334,8 @@
         "value": 3860958,
         "breakdown": [
             {
-                "category": "Salaries and wages",
-                "value": 1274151
+                "category": "Infrastructure",
+                "value": 30000
             },
             {
                 "category": "Dean's office operating",
@@ -358,16 +350,16 @@
                 "value": 500898
             },
             {
-                "category": "Infrastructure",
-                "value": 30000
-            },
-            {
                 "category": "Undergraduate advising",
                 "value": 426462
             },
             {
                 "category": "IS FS",
                 "value": 427094
+            },
+            {
+                "category": "Salaries and wages",
+                "value": 1274151
             }
         ]
     }
