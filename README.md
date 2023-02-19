@@ -1,8 +1,8 @@
+# UT Dallas Budget Breakdown Website
+
 ## About
 
-## Getting Started
-
-This repository
+First, clone the repository:
 
 ```shell
 git clone https://github.com/utdal/sg-budget-breakdown.git
@@ -10,10 +10,16 @@ git clone https://github.com/utdal/sg-budget-breakdown.git
 
 Now ensure that you have a working installation of Node.js and NPM.
 
-To start the local development server accessible at `https://localhost:1234`:
+Install all dependencies:
 
 ```shell
-npm start
+npm install
+```
+
+To start the local development server accessible at `https://localhost:3000`:
+
+```shell
+npm run dev
 ```
 
 ### Editing Data
