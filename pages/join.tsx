@@ -45,6 +45,8 @@ export default function JoinPage() {
           <Image
             className="aspect-square max-h-[240px] md:max-h-max"
             src="/img/sg-logo.jpg"
+            width={240}
+            height={240}
             alt=""
           />
         </div>

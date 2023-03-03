@@ -1,6 +1,13 @@
+import dynamic from 'next/dynamic';
 import Head from "next/head";
-import * as am5 from "@amcharts/amcharts5";
-import * as am5xy from "@amcharts/amcharts5/xy";
+
+import TopSankey from '@/components/charts/TopSankey'
+import SchoolPieChart from '@/components/charts/SchoolPieChart'
+import FeeTreemap from '@/components/charts/FeeTreemap';
+
+// const TopSankey = dynamic(() => import('../components/charts/TopSankey'), { ssr: false });
+// const SchoolPieChart = dynamic(() => import('../components/charts/SchoolPieChart'), { ssr: false });
+// const FeeTreemap = dynamic(() => import('../components/charts/FeeTreemap'), { ssr: false });
 
 export default function DetailsPage() {
   return (
@@ -63,56 +70,24 @@ export default function DetailsPage() {
       </section>
       <section id="breakdown" className="">
         <div className="p-4 md:mx-auto md:max-w-6xl">
-          <h1 className="mt-8 text-2xl font-bold">
-            High-Level University Budget:
-          </h1>
+          <h1 className="mt-8 text-2xl font-bold">High-Level University Budget:</h1>
           <p>
             For each visualization, hover over the parts to see the raw dollar
             amounts corresponding to a particular category of spending.
           </p>
-          <div className="sankey w-full h-[1200px]" id="sankey_top"></div>
+          <TopSankey />
+          <h1 className="mt-8 text-2xl font-bold">
+            Expenses by School
+          </h1>
+          <SchoolPieChart />
           <p className="text-sm">
             <em>
-              Note: Adjustments are not a true revenue source, but they have
-              been displayed as such to account for expense adjustments.
+              Note: Each school varies greatly in terms of size and the amount of 
+              resources needed to conduct research and provide instruction.
             </em>
           </p>
-          <h1 className="mt-8 text-2xl font-bold">
-            Instructional Expenses from Educational and General Funds
-          </h1>
-          <p className="mt-4 text-lg">
-            Below, you can see the proportion of instructional expenses that go
-            towards salaries in each school.
-          </p>
-          <ul className="space-y-2"></ul>
-          <div
-            className="sankey w-full h-[800px]"
-            id="sankey_instruction"
-          ></div>
           <h1 className="mt-8 text-2xl font-bold">Mandatory student fees:</h1>
-          <div className="treemap w-full h-[450px]" id="treemap_fees"></div>
-          <h1 className="mt-8 text-2xl font-bold">
-            Operations Expenses from Educational and General Funds:
-          </h1>
-          <p className="mt-4 text-lg">
-            This chart showcases the breakdown of operational funds from
-            educational and general funds between Facilities Management, UTD
-            Police, and EMS. As a note, the majority of funding for operations
-            and maintenance comes from designated funds, but we do not have
-            access to this granular data for that fund category.
-          </p>
-          <div className="sankey w-full h-[300px]" id="sankey_operations"></div>
-          <h1 className="mt-8 text-2xl font-bold">
-            Institutional Support Salary Breakdowns:
-          </h1>
-          <p className="mt-4 text-lg">
-            The portion of educational and general funds that are directed
-            towards institutional support is broken down as shown.
-          </p>
-          <div
-            className="treemap w-full h-[450px]"
-            id="treemap_insti_supp"
-          ></div>
+          <FeeTreemap />
         </div>
       </section>
     </>
