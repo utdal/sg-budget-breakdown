@@ -6,12 +6,12 @@ import * as am5hierarchy from "@amcharts/amcharts5/hierarchy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
 import sankey_top from '../src/data/top_level.json';
+import sankey_housing from '../src/data/housing.json';
+import sankey_recreation from '../src/data/recreation.json';
 import pie_schools from '../src/data/schools.json';
-import sankey_operations from '../src/data/ed-gen-funds_oper_main.json';
-import treemap_insti_supp from '../src/data/ed-gen-funds_insti_supp.json';
 import treemap_fees from '../src/data/fees.json';
 
-function buildSankey(divName: string, data: any[]) {
+function buildSankey(divName: string, data: any[], padRight: number) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     root.setThemes([
@@ -23,7 +23,8 @@ function buildSankey(divName: string, data: any[]) {
           sourceIdField: "from",
           targetIdField: "to",
           valueField: "value",
-          paddingRight: 200
+          paddingRight: padRight,
+          paddingBottom: 50
         })
     );
     // Add data from object
@@ -232,7 +233,8 @@ buildSankey("sankey_top", sankey_top, 200);
 
 buildPie("pie_schools", pie_schools);
 
-buildSankey("sankey_operations", sankey_operations, 200);
+buildSankey("sankey_housing", sankey_housing, 300);
+buildSankey("sankey_recreation", sankey_recreation, 300);
 
 buildTreeMap("treemap_fees", treemap_fees);
-buildTreeMap("treemap_insti_supp", treemap_insti_supp);
+
