@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Details - UT Dallas Budget Breakdown</title>
+    <title>Team - UT Dallas Budget Breakdown</title>
     <link rel="icon" href="/favicon.ico" />
     <meta property="og:site_name" content="UTD Student Government" />
-    <meta property="og:title" content="University Budget Breakdown" />
+    <meta property="og:title" content="Team - University Budget Breakdown" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="article" />
     <meta property="article:modified_time" content="article" />
@@ -16,17 +16,16 @@
 
     <meta
       property="og:description"
-      content="Learn how your tuition funds university departments and the services that you use, and see clear, accessible information on the university's finances."
+      content="See who helped work on the budget breakdown."
     />
     <meta
       property="og:url"
-      content="https://utdal.github.io/sg-budget-breakdown"
+      content="https://utdal.github.io/sg-budget-breakdown/team"
     />
-    <meta property="og:image" content="../src/img/sg-logo.jpg" />
+    <meta property="og:image" content="../img/sg-logo.jpg" />
 
-    <link rel="stylesheet" href="../src/main.css" />
-    <script type="module" src="./data.ts"></script>
-    <script type="module" src="../src/main.js"></script>
+    <link rel="stylesheet" href="../main.css" />
+    <script type="module" src="../main.js"></script>
   </head>
 
   <body class="bg-slate-100">
@@ -117,10 +116,10 @@
           </li>
           <li>
             <a
-              href="../join/index.html"
+              href="../faq/index.html"
               class="m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition"
             >
-              People
+              FAQ
             </a>
           </li>
           <li>
@@ -134,89 +133,124 @@
         </ul>
       </div>
     </nav>
-    <section id="overview">
-      <div class="mx-auto max-w-4xl p-4 lg:p-8">
-        <h1 class="text-3xl font-bold my-4">Overview</h1>
-        <h2 class="text-2xl font-semibold my-2">How the budget works</h2>
-        <p>
-          Prior to the start of each fiscal year, the university sends an
-          <a
-            class="text-blue-600 hover:underline transition"
-            href="https://finance.utdallas.edu/public-reports/"
-            >operating budget</a
-          >
-          to the
-          <a
-            class="text-blue-600 hover:underline transition"
-            href="https://www.utsystem.edu/offices/board-regents"
-            >Board of Regents</a
-          >
-          of the University of Texas System for approval, and following approval
-          the operating budget is made publicly available on the UT Dallas
-          Office of Budget and Finance website as a PDF. We manually converted
-          the published budget to the necessary formats to conduct the
-          calculations and transformations necessary to produce the following
-          visualizations.
-        </p>
+    <section id="jumbotron" class="bg-[#e87500] text-white">
+      <div class="max-w-4xl mx-auto p-8 lg:py-16">
+        <div class="text-center text-4xl lg:text-left lg:text-6xl font-bold">
+          Team
+        </div>
+        <div class="mt-4 text-center text-2xl lg:text-left lg:text-4xl">
+          Meet the students who made this happen.
+        </div>
       </div>
     </section>
-    <section id="breakdown" class="">
-      <div class="p-4 md:mx-auto md:max-w-6xl">
-        <h1 class="mt-8 text-2xl font-bold">High-Level University Budget:</h1>
-        <p>
-          For each visualization, hover over the parts to see the raw dollar
-          amounts corresponding to a particular category of spending.
-        </p>
-        <div class="sankey w-full" id="sankey_top" style="height: 1200px"></div>
-        <h1 class="mt-8 text-2xl font-bold">
-          Expenses by School
-        </h1>
-        <div
-          class="sankey"
-          id="pie_schools"
-          style="width: 100%; height: 800px"
-        ></div>
-        <p class="text-sm">
-          <emphasis
-            >Note: Each school varies greatly in terms of size and the amount of 
-            resources needed to conduct research and provide instruction.</emphasis
-          >
-        </p>
-        <h1 class="mt-8 text-2xl font-bold">Mandatory student fees:</h1>
-        <div
-          class="treemap"
-          id="treemap_fees"
-          style="width: 100%; height: 450px"
-        ></div>
-        <h1 class="mt-8 text-2xl font-bold">
-          Operations Expenses from Educational and General Funds:
-        </h1>
-        <p class="mt-4 text-lg">
-          This chart showcases the breakdown of operational funds from
-          educational and general funds between Facilities Management, UTD
-          Police, and EMS. As a note, the majority of funding for operations and
-          maintenance comes from designated funds, but we do not have access to
-          this granular data for that fund category.
-        </p>
-        <div
-          class="sankey"
-          id="sankey_operations"
-          style="width: 100%; height: 300px"
-        ></div>
-        <h1 class="mt-8 text-2xl font-bold">
-          Institutional Support Salary Breakdowns:
-        </h1>
-        <p class="mt-4 text-lg">
-          The portion of educational and general funds that are directed towards
-          institutional support is broken down as shown.
-        </p>
-        <div
-          class="treemap"
-          id="treemap_insti_supp"
-          style="width: 100%; height: 450px"
-        ></div>
+    <section id="members">
+      <div class="max-w-7xl mx-auto p-8 lg:py-16">
+        <div class="text-xl">
+          The Task Force currently consists of the following members:
+        </div>
+        <div class="py-4 md:grid md:grid-cols-4 md:gap-x-8 md:gap-y-4">
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/team/about-griffin.jpg"
+                alt="Head shot of Griffin Davis"
+              />
+              <div class="text-2xl font-bold text-center">
+                <a href="https://gcd.dev">Griffin Davis</a>
+              </div>
+              <div class="text-xl text-center">At-Large Senator</div>
+              <div class="italics text-center">
+                Task Force Chair, Visualizations Lead
+              </div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/team/about-andres.jpg"
+                alt="Head shot of Andres Andujar"
+              />
+              <div class="text-2xl font-bold text-center">Andres Andujar</div>
+              <div class="text-xl text-center">Graduate Senator</div>
+              <div class="italics text-center">Budget Researcher</div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/team/about-willie.jpg"
+                alt="Student Government logo placeholder"
+              />
+              <div class="text-2xl font-bold text-center">
+                Willie Chalmers III
+              </div>
+              <div class="text-xl text-center">ECS Senator</div>
+              <div class="italics text-center">Web Lead</div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/team/about-margaret.jpg"
+                alt="Student Government logo placeholder"
+              />
+              <div class="text-2xl font-bold text-center">Margaret Moore</div>
+              <div class="text-xl text-center">
+                Vice President,<br />Student Government
+              </div>
+              <div class="italics text-center">University Relations</div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/team/about-koti.jpg"
+                alt="Head shot of Koti Gangasani"
+              />
+              <div class="text-2xl font-bold text-center">
+                Koti Reddy Gangasani
+              </div>
+              <div class="text-xl text-center">Graduate Senator</div>
+              <div class="italics text-center">Budget Researcher</div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/team/about-leah.jpg"
+                alt="Head shot of Leah Sullivan"
+              />
+              <div class="text-2xl font-bold text-center">Leah Sullivan</div>
+              <div class="text-xl text-center">At-Large Senator</div>
+              <div class="italics text-center">Budget Researcher</div>
+            </div>
+          </article>
+          <article class="py-2">
+            <div class="space-y-2">
+              <img
+                class="object-cover aspect-square"
+                src="../img/sg-logo.jpg"
+                alt="Placeholder headshot"
+              />
+              <div class="text-2xl font-bold text-center">
+                Hamza Zulquernain
+              </div>
+              <div class="text-xl text-center">
+                Computer Engineering Sophomore
+              </div>
+              <div class="italics text-center">Budget Researcher</div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
+
     <footer class="py-8 px-4 lg:px-8 bg-secondary text-white">
       <div class="max-w-6xl mx-auto space-y-8 lg:grid lg:grid-cols-4 lg:space-y-0">
         <div class="lg:col-span-2">

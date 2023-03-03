@@ -5,11 +5,11 @@ import * as am5flow from "@amcharts/amcharts5/flow";
 import * as am5hierarchy from "@amcharts/amcharts5/hierarchy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
-import sankey_top from '../src/data/top_level.json';
-import pie_schools from '../src/data/schools.json';
-import sankey_operations from '../src/data/ed-gen-funds_oper_main.json';
-import treemap_insti_supp from '../src/data/ed-gen-funds_insti_supp.json';
-import treemap_fees from '../src/data/fees.json';
+import sankey_top from '../data/top_level.json';
+import pie_schools from '../data/schools.json';
+import sankey_operations from '../data/ed-gen-funds_oper_main.json';
+import treemap_insti_supp from '../data/ed-gen-funds_insti_supp.json';
+import treemap_fees from '../data/fees.json';
 
 function buildSankey(divName: string, data: any[]) {
     // Create root element with theme

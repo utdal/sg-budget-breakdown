@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   base: "/sg-budget-breakdown/",
+  root: "src",
   build: {
     // See this for more info: https://vitejs.dev/guide/build.html#multi-page-app
     rollupOptions: {
