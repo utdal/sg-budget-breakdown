@@ -1,47 +1,5 @@
 [
   {
-    "from": "Adjustments",
-    "to": "Educational and General",
-    "value": 22024442.73,
-    "sub": []
-  },
-  {
-    "from": "Adjustments",
-    "to": "Designated",
-    "value": 107852933.32,
-    "sub": []
-  },
-  {
-    "from": "Adjustments",
-    "to": "Auxiliary",
-    "value": 632463.0,
-    "sub": []
-  },
-  {
-    "from": "Adjustments",
-    "to": "Restricted",
-    "value": 38718937.94,
-    "sub": []
-  },
-  {
-    "from": "Designated",
-    "to": "Adjustments (Out)",
-    "value": 1786830.22,
-    "sub": []
-  },
-  {
-    "from": "Auxiliary",
-    "to": "Adjustments (Out)",
-    "value": 1733097.87,
-    "sub": []
-  },
-  {
-    "from": "Restricted",
-    "to": "Adjustments (Out)",
-    "value": 11163.9,
-    "sub": []
-  },
-  {
     "from": "AUF/Approp. Transfers Received",
     "to": "Educational and General",
     "value": 6379791,
@@ -72,24 +30,6 @@
     "sub": []
   },
   {
-    "from": "Educational and General",
-    "to": "Discounts and Allowances",
-    "value": 19778126.09,
-    "sub": []
-  },
-  {
-    "from": "Designated",
-    "to": "Discounts and Allowances",
-    "value": 120082386.15,
-    "sub": []
-  },
-  {
-    "from": "Auxiliary",
-    "to": "Discounts and Allowances",
-    "value": 9492008.76,
-    "sub": []
-  },
-  {
     "from": "Federal Sponsored Programs",
     "to": "Designated",
     "value": 18517092,
@@ -98,31 +38,25 @@
   {
     "from": "Federal Sponsored Programs",
     "to": "Restricted",
-    "value": 44416526,
+    "value": 80369506,
     "sub": []
   },
   {
-    "from": "State Sponsored Programs",
+    "from": "Other Sponsored Programs",
     "to": "Educational and General",
     "value": 16458054,
     "sub": []
   },
   {
-    "from": "State Sponsored Programs",
+    "from": "Other Sponsored Programs",
     "to": "Restricted",
-    "value": 2241656,
+    "value": 14863600,
     "sub": []
   },
   {
-    "from": "Local/Private Sponsored Programs",
+    "from": "Other Sponsored Programs",
     "to": "Designated",
-    "value": 2178599,
-    "sub": []
-  },
-  {
-    "from": "Local/Private Sponsored Programs",
-    "to": "Restricted",
-    "value": 12621944,
+    "value": 13503425,
     "sub": []
   },
   {
@@ -144,7 +78,7 @@
     "sub": []
   },
   {
-    "from": "Auxiliary Enterprises (Revenues)",
+    "from": "Auxiliary Enterprise Revenue",
     "to": "Auxiliary",
     "value": 51523512,
     "sub": []
@@ -159,18 +93,6 @@
     "from": "Other Operating Revenues",
     "to": "Restricted",
     "value": 1751000,
-    "sub": []
-  },
-  {
-    "from": "Federal Sponsored Prog. (Nonoperating)",
-    "to": "Restricted",
-    "value": 35952980,
-    "sub": []
-  },
-  {
-    "from": "State/Local Sponsored Prog. (Nonoperating)",
-    "to": "Designated",
-    "value": 11324826,
     "sub": []
   },
   {
@@ -331,97 +253,67 @@
   },
   {
     "from": "Educational and General",
-    "to": "Unexpended Plant Funds",
-    "value": 2000000,
-    "sub": []
-  },
-  {
-    "from": "Unexpended Plant Funds",
-    "to": "Operation & Maintenance",
-    "value": 2000000,
-    "sub": []
-  },
-  {
-    "from": "Educational and General",
-    "to": "Scholarships & Fellowships",
+    "to": "Scholarships/Fellowships",
     "value": 17099546,
     "sub": []
   },
   {
     "from": "Designated",
-    "to": "Scholarships & Fellowships",
+    "to": "Scholarships/Fellowships",
     "value": 124761905,
     "sub": []
   },
   {
     "from": "Restricted",
-    "to": "Scholarships & Fellowships",
+    "to": "Scholarships/Fellowships",
     "value": 39831329,
     "sub": []
   },
   {
     "from": "Auxiliary",
-    "to": "Aux. Enterprises (Expenses)",
+    "to": "Aux. Enterprise Expenses",
     "value": 48275378,
     "sub": []
   },
   {
     "from": "Designated",
-    "to": "Debt (Interest)",
-    "value": 5847851,
+    "to": "Debt",
+    "value": 67864459,
     "sub": []
   },
   {
     "from": "Auxiliary",
-    "to": "Debt (Interest)",
-    "value": 14243285,
+    "to": "Debt",
+    "value": 24423200,
     "sub": []
   },
   {
     "from": "Restricted",
-    "to": "Debt (Interest)",
-    "value": 95089,
-    "sub": []
-  },
-  {
-    "from": "Designated",
-    "to": "Debt (Principal)",
-    "value": 12016608,
-    "sub": []
-  },
-  {
-    "from": "Auxiliary",
-    "to": "Debt (Principal)",
-    "value": 10179915,
-    "sub": []
-  },
-  {
-    "from": "Restricted",
-    "to": "Debt (Principal)",
-    "value": 65000,
+    "to": "Debt",
+    "value": 160089,
     "sub": []
   },
   {
     "from": "Educational and General",
-    "to": "Depreciation & Amortization",
+    "to": "Depreciation & Amortiz.",
     "value": 20713151.49,
     "sub": []
   },
   {
     "from": "Designated",
-    "to": "Depreciation & Amortization",
+    "to": "Depreciation & Amortiz.",
     "value": 44814998.4,
     "sub": []
   },
   {
     "from": "Auxiliary",
-    "to": "Depreciation & Amortization",
+    "to": "Depreciation & Amortiz.",
     "value": 4378612.8,
     "sub": []
   },
   {
     "from": "Restricted",
-    "to": "Depreciation & Amortization",
+    "to": "Depreciation & Amortiz.",
     "value": 18295230.32,
     "sub": []
   }
