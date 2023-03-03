@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
 @tailwind utilities;
 
 /* faq */
@@ -13,6 +12,3 @@
 #faq-item {
     margin-bottom: 0.5rem;
 }
-=======
-@tailwind utilities;
->>>>>>> main
