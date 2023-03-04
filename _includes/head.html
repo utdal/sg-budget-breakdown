@@ -23,6 +23,15 @@
     <meta property="og:image" content="{{ '/assets/img/sg-logo.jpg' | relative_url }}" />
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-    {% if page.id == '/details' %}<script type="module" src="{{ '/assets/js/data.js' | relative_url }}"></script>{% endif %}
-    <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+    {% if page.id == '/details' %}
+      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/flow.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+      <script type="module" src="{{ '/assets/js/data.js' | relative_url }}"></script>
+    {% endif %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </head>
