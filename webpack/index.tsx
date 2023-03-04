@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import * as React from "react";
+import { useState, useEffect } from "react";
+import { createRoot } from "react-dom/client";
 
 const DEFAULT_YEAR = 2023;
 
@@ -76,7 +78,7 @@ function TableSortColumnHeader({
       <span>{label}</span>
       <div
         className={
-          "inline hover:bg-slate-300 transition rounded-lg p-1 cursor-pointer " +
+          "inline hover:bg-slate-300 transition rounded-lg p-1 cursor-pointer tableSort " +
           (active ? "bg-blue-200" : "bg-slate-200")
         }
         onClick={() => onOptionClicked(id)}
@@ -287,3 +289,7 @@ function SearchBox({ currentQuery, onUpdate, onSubmit }: SearchBoxProps) {
     </div>
   );
 }
+
+const container = document.getElementById("searchRoot");
+const root = createRoot(container);
+root.render(<SearchApp />);
