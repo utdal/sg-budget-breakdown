@@ -8,8 +8,5 @@
     {% include navbar.html %}
 
     {{ content }}
-
-    {% if page.id == '/details' %}<script type="module" src="{{ '/assets/js/data.js' | relative_url }}"></script>{% endif %}
-    <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
 </html>
