@@ -11,7 +11,7 @@ import sankey_operations from '../data/ed-gen-funds_oper_main.json';
 import treemap_insti_supp from '../data/ed-gen-funds_insti_supp.json';
 import treemap_fees from '../data/fees.json';
 
-function buildSankey(divName: string, data: any[]) {
+function buildSankey(divName, data) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     root.setThemes([
@@ -40,7 +40,7 @@ function buildSankey(divName: string, data: any[]) {
     series.appear(1000, 100);
 }
 
-function buildTreeMap(divName: string, data: any[]) {
+function buildTreeMap(divName, data) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     const myTheme = am5.Theme.new(root);
@@ -91,7 +91,7 @@ function buildTreeMap(divName: string, data: any[]) {
     );
     series.get("colors").set("step", 3);
     // Add data from object
-    function processData(data: any) {
+    function processData(data) {
         var treeData = data;
         return [{
           name: "Root",
@@ -102,7 +102,7 @@ function buildTreeMap(divName: string, data: any[]) {
     series.set("selectedDataItem", series.dataItems[0]);
 }
 
-function buildPie(divName: string, data: any[]) {
+function buildPie(divName, data) {
     let root = am5.Root.new(divName);
     root.setThemes([
         am5themes_Animated.new(root)
@@ -168,7 +168,7 @@ function buildPie(divName: string, data: any[]) {
         strokeOpacity: 0
     });
     
-    let currentSlice: am5.Slice | undefined;
+    let currentSlice;
     pieSeries.slices.template.on("active", function(active, slice) {
         if (currentSlice && currentSlice != slice && active) {
             currentSlice.set("active", false)
