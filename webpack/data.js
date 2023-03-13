@@ -1,17 +1,10 @@
-import * as am5 from "@amcharts/amcharts5";
-import * as am5xy from "@amcharts/amcharts5/xy";
-import * as am5percent from "@amcharts/amcharts5/percent";
-import * as am5flow from "@amcharts/amcharts5/flow";
-import * as am5hierarchy from "@amcharts/amcharts5/hierarchy";
-import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-
-import sankey_top from '../src/data/top_level.json';
+import sankey_top from '../data/top_level.json';
+import pie_schools from '../data/schools.json';
 import sankey_housing from '../src/data/housing.json';
 import sankey_recreation from '../src/data/recreation.json';
-import pie_schools from '../src/data/schools.json';
-import treemap_fees from '../src/data/fees.json';
+import treemap_fees from '../data/fees.json';
 
-function buildSankey(divName: string, data: any[], padRight: number) {
+function buildSankey(divName, data) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     root.setThemes([
@@ -41,7 +34,7 @@ function buildSankey(divName: string, data: any[], padRight: number) {
     series.appear(1000, 100);
 }
 
-function buildTreeMap(divName: string, data: any[]) {
+function buildTreeMap(divName, data) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     const myTheme = am5.Theme.new(root);
@@ -92,7 +85,7 @@ function buildTreeMap(divName: string, data: any[]) {
     );
     series.get("colors").set("step", 3);
     // Add data from object
-    function processData(data: any) {
+    function processData(data) {
         var treeData = data;
         return [{
           name: "Root",
@@ -103,7 +96,7 @@ function buildTreeMap(divName: string, data: any[]) {
     series.set("selectedDataItem", series.dataItems[0]);
 }
 
-function buildPie(divName: string, data: any[]) {
+function buildPie(divName, data) {
     let root = am5.Root.new(divName);
     root.setThemes([
         am5themes_Animated.new(root)
@@ -169,7 +162,7 @@ function buildPie(divName: string, data: any[]) {
         strokeOpacity: 0
     });
     
-    let currentSlice: am5.Slice | undefined;
+    let currentSlice;
     pieSeries.slices.template.on("active", function(active, slice) {
         if (currentSlice && currentSlice != slice && active) {
             currentSlice.set("active", false)
@@ -237,4 +230,3 @@ buildSankey("sankey_housing", sankey_housing, 300);
 buildSankey("sankey_recreation", sankey_recreation, 300);
 
 buildTreeMap("treemap_fees", treemap_fees);
-

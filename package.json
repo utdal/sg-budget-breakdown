@@ -1,25 +1,26 @@
 {
-  "license": "MIT",
   "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "predeploy": "shx rm -rf dist/*",
-    "deploy": "vite build",
-    "postdeploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "dev": "npx webpack & JEKYLL_ENV=development NODE_ENV=development bundle exec jekyll serve",
+    "build": "npx webpack & JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build"
   },
   "devDependencies": {
-    "parcel": "^2.8.3",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@tailwindcss/typography": "^0.5.9",
+    "@webpack-cli/generators": "^3.0.1",
+    "autoprefixer": "^10.4.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.2",
+    "babel-preset-env": "^1.7.0",
+    "cssnano": "^5.1.15",
     "postcss": "^8.4.21",
-    "push-dir": "^0.4.1",
-    "shx": "^0.3.4",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.2.7",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@amcharts/amcharts5": "^5.3.3",
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.3"
+    "@amcharts/amcharts5": "^5.3.6"
   }
 }
