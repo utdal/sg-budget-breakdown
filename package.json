@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "npx webpack & JEKYLL_ENV=development NODE_ENV=development bundle exec jekyll serve",
-    "build": "npx webpack & JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build"
+    "dev": "npx webpack && JEKYLL_ENV=development NODE_ENV=development bundle exec jekyll serve",
+    "build": "npx webpack && JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

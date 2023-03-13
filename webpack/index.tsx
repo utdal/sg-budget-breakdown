@@ -2,6 +2,8 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 
+import * as COST_CENTERS from '../data/cost_centers.json';
+
 const DEFAULT_YEAR = 2023;
 
 /**
@@ -11,15 +13,19 @@ const DEFAULT_YEAR = 2023;
  * @returns The cost center for the given fiscal year.
  */
 function getData(year: number = DEFAULT_YEAR) {
-  return [...Array(100).keys()].map((data) => {
-    const expenses = Math.random() * 10000;
-    return {
-      id: data,
-      name: `Test Cost Center ${data + Math.floor(data * 10 * Math.random())}`,
-      expenses: expenses,
-      revenue: Math.random() + expenses,
-    };
-  });
+  let data = [];
+
+  for (let i = 0; i < 2089; i++) {
+    let item = COST_CENTERS[i];
+    data.push({
+      id: item.id,
+      name: item.name,
+      revenue: item.revenue,
+      expenses: item.expenses
+    })
+  };
+
+  return data;
 }
 
 function filterResults(data: CostCenterInfo[], query: string) {
