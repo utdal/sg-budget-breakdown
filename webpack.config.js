@@ -6,10 +6,13 @@ const isProduction = process.env.NODE_ENV == 'production';
 
 
 const config = {
-    entry: './webpack/data.js',
+    entry: {
+        data: './webpack/data.js',
+        search: './webpack/index.tsx',
+    },
     output: {
         path: path.resolve(__dirname, 'assets/js'),
-        filename: 'data.js'
+        filename: '[name].js'
     },
     devServer: {
         open: true,
@@ -26,6 +29,11 @@ const config = {
                 loader: 'babel-loader',
             },
             {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },
@@ -39,8 +47,6 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
-        
     } else {
         config.mode = 'development';
     }
