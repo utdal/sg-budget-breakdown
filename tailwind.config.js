@@ -16,6 +16,8 @@ module.exports = {
           secondary: {
             DEFAULT: '#154734',
           },
+          'utd-orange': '#e87500',
+          'utd-green': '#154734'
         },
       },
     },
