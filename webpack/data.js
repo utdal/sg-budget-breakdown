@@ -1,10 +1,12 @@
 import sankey_top from '../data/top_level.json';
 import pie_schools from '../data/schools.json';
-import sankey_operations from '../data/ed-gen-funds_oper_main.json';
-import treemap_insti_supp from '../data/ed-gen-funds_insti_supp.json';
+import sankey_housing from '../data/housing.json';
+import sankey_recreation from '../data/recreation.json';
+import sankey_parking from '../data/parking.json';
+import sankey_dining from '../data/dining.json';
 import treemap_fees from '../data/fees.json';
 
-function buildSankey(divName, data) {
+function buildSankey(divName, data, padRight) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     root.setThemes([
@@ -16,7 +18,8 @@ function buildSankey(divName, data) {
           sourceIdField: "from",
           targetIdField: "to",
           valueField: "value",
-          paddingRight: 200
+          paddingRight: padRight,
+          paddingBottom: 50
         })
     );
     // Add data from object
@@ -225,7 +228,9 @@ buildSankey("sankey_top", sankey_top, 200);
 
 buildPie("pie_schools", pie_schools);
 
-buildSankey("sankey_operations", sankey_operations, 200);
+buildSankey("sankey_housing", sankey_housing, 300);
+buildSankey("sankey_recreation", sankey_recreation, 300);
+buildSankey("sankey_parking", sankey_parking, 300);
+buildSankey("sankey_dining", sankey_dining, 300);
 
 buildTreeMap("treemap_fees", treemap_fees);
-buildTreeMap("treemap_insti_supp", treemap_insti_supp);
