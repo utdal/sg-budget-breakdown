@@ -2,6 +2,8 @@ import sankey_top from '../data/top_level.json';
 import pie_schools from '../data/schools.json';
 import sankey_housing from '../data/housing.json';
 import sankey_recreation from '../data/recreation.json';
+import sankey_parking from '../data/parking.json';
+import sankey_dining from '../data/dining.json';
 import treemap_fees from '../data/fees.json';
 
 function buildSankey(divName, data, padRight) {
@@ -228,5 +230,7 @@ buildPie("pie_schools", pie_schools);
 
 buildSankey("sankey_housing", sankey_housing, 300);
 buildSankey("sankey_recreation", sankey_recreation, 300);
+buildSankey("sankey_parking", sankey_parking, 300);
+buildSankey("sankey_dining", sankey_dining, 300);
 
 buildTreeMap("treemap_fees", treemap_fees);

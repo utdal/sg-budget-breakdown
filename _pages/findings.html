@@ -9,10 +9,19 @@ title: Findings
 		<li class="mr-2">
 			<a
 				href="#"
-				class="inline-block p-4 border-b-2 rounded-t-lg active dark:text-blue-500 dark:border-blue-500 text-blue-600 border-blue-600"
+				class="inline-block p-4 border-b-2 rounded-t-lg active text-utd-green border-utd-green"
 				id="tab_overview"
 				onClick="open_overview()"
 				>Overview</a
+			>
+		</li>
+        <li class="mr-2">
+			<a
+				href="#"
+				class="inline-block p-4 border-b-2 rounded-t-lg"
+				id="tab_fees"
+				onClick="open_fees()"
+				>Student Fees</a
 			>
 		</li>
 		<li class="mr-2">
@@ -161,14 +170,25 @@ title: Findings
 	</div>
 
 	<div class="p-4 md:mx-auto md:max-w-6xl">
-		<h1 class="mt-8 text-2xl font-bold">High-Level University Budget:</h1>
+		<h1 class="mt-6 text-2xl font-bold">High-Level University Budget:</h1>
 		<p>
 			For each visualization, hover over the parts to see the raw dollar amounts
 			corresponding to a particular category of spending.
 		</p>
 		<div class="sankey w-full" id="sankey_top" style="height: 1200px"></div>
+	</div>
+</section>
 
-		<h1 class="mt-8 text-2xl font-bold">Mandatory student fees:</h1>
+<section id="fees" class="hidden">
+	<div class="mx-auto max-w-6xl p-4 lg:p-8">
+		<h1 class="mt-8 text-2xl font-bold">Student Fees</h1>
+        <p>
+			The university charges students various fees in addition to their tuition.
+            These fees fund various services provided to students, both related to instruction
+            and auxiliary services. The specific fees and statutes that dictates them are listed in the Overview.
+            In addition to these mandatory fees, there are other fees specific to certain programs.
+		</p>
+		<br />
 		<div
 			class="treemap"
 			id="treemap_fees"
@@ -181,9 +201,10 @@ title: Findings
 		<h1 class="mt-8 text-2xl font-bold">Expenses by School</h1>
 		<p>
 			The majority of the university's spending on instruction goes to the wages
-			and salaries of faculty and staff. The school aims to fund as many of the
-			salaries as possible using state appropriations. This is because if state
-			funds are used to pay a salary, the state will also pay for the benefits.
+			and salaries of faculty and staff. The university aims to fund as many of
+			the salaries as possible using state appropriations. This is because if
+			state funds are used to pay a salary, the state will also pay for the
+			benefits.
 		</p>
 		<br />
 		<p>
@@ -223,38 +244,37 @@ title: Findings
 	<div class="p-4 md:mx-auto md:max-w-6xl">
 		<h1 class="mt-8 text-2xl font-bold">University Housing</h1>
 		<p>
-			University Housing is considered an auxiliary service. This means that it is considered to be
-            outside of the core purpose of the university, educating degree-seeking students. In such,
-            the university expects it to be self-funded. It should, however, not run a significant profit, given 
-            the university is a not a for-profit business.
+			University Housing is considered an auxiliary service. This means that it
+			is considered to be outside of the core purpose of the university,
+			educating degree-seeking students. In such, the university expects it to
+			be self-funded. It should, however, not run a significant profit, given
+			the university is a not a for-profit business.
 		</p>
 		<br />
 		<p>
-			University Housing at UTD provides three primary sources of housing: 
-            <a 
-                href="https://housing.utdallas.edu/housing-options/university-commons/"
-                class="text-blue-600 hover:underline transition">
-                University Commons
-            </a> (first-year dormitories), 
-            <a 
-                href="https://housing.utdallas.edu/housing-options/canyon-creek-heights/"
-                class="text-blue-600 hover:underline transition">
-                Canyon Creek Heights
-            </a> (furnished apartments), and
-            <a 
-                href="https://housing.utdallas.edu/housing-options/university-village/"
-                class="text-blue-600 hover:underline transition">
-                University Village 
-            </a> (unfurnished apartments).
-
-            Although Northside is located on land owned by UTD, those apartments are operated by an outside
-            company 
-            (<a 
-                href="https://www.balfourbeattycommunities.com/"
-                class="text-blue-600 hover:underline transition">
-                Balfour Beatty Communities
-            </a>) 
-            that leases the land from the university.
+			University Housing at UTD provides three primary sources of housing:
+			<a
+				href="https://housing.utdallas.edu/housing-options/university-commons/"
+				class="text-blue-600 hover:underline transition">
+				University Commons
+			</a>
+			(first-year dormitories),
+			<a
+				href="https://housing.utdallas.edu/housing-options/canyon-creek-heights/"
+				class="text-blue-600 hover:underline transition">
+				Canyon Creek Heights
+			</a>
+			(furnished apartments), and
+			<a
+				href="https://housing.utdallas.edu/housing-options/university-village/"
+				class="text-blue-600 hover:underline transition">
+				University Village
+			</a>
+			(unfurnished apartments). Although Northside is located on land owned by
+			UTD, those apartments are operated by an outside company (<a
+				href="https://www.balfourbeattycommunities.com/"
+				class="text-blue-600 hover:underline transition">Balfour Beatty Communities</a
+			>) that leases the land from the university.
 		</p>
 		<div
 			class="sankey"
@@ -265,48 +285,102 @@ title: Findings
 
 <section id="recreation" class="hidden">
 	<div class="p-4 md:mx-auto md:max-w-6xl">
-        <h1 class="mt-8 text-2xl font-bold">University Recreation</h1>
+		<h1 class="mt-8 text-2xl font-bold">University Recreation</h1>
 		<p>
-			University Recreation and Intercollegiate Athletics are both considered an auxiliary services. 
-            This means that they is considered to be outside of the core purpose of the university, educating degree-seeking students. 
-            In such, the university expects auxiliary services to be self-funded, and in this case these services are funded by specific
-            student fees.
+			University Recreation and Intercollegiate Athletics are both considered an
+			auxiliary services. This means that they is considered to be outside of
+			the core purpose of the university, educating degree-seeking students. In
+			such, the university expects auxiliary services to be self-funded, and in
+			this case these services are funded by specific student fees.
 		</p>
 		<br />
 		<p>
-			With the exception of the University of Texas at Austin and Texas A&M University, every public university in Texas spends 
-            more on intercollegiate athletics than they earn from ticket sales, sponsorships, and other forms of income. For more information on
-            athletics at other Texas public universities, see 
-            <a 
-                href="https://college-sports.texastribune.org/"
-                class="text-blue-600 hover:underline transition">
-                Ballpark Figures
-            </a> from the Texas Tribune. It is unclear whether the situtation is different for private schools since they are not required to 
-            release this information.
+			With the exception of the University of Texas at Austin and Texas A&M
+			University, every public university in Texas spends more on
+			intercollegiate athletics than they earn from ticket sales, sponsorships,
+			and other forms of income. For more information on athletics at other
+			Texas public universities, see
+			<a
+				href="https://college-sports.texastribune.org/"
+				class="text-blue-600 hover:underline transition">
+				Ballpark Figures
+			</a>
+			from the Texas Tribune. It is unclear whether the situtation is different
+			for private schools since they are not required to release this
+			information.
 		</p>
-        <br />
+		<br />
 		<p>
-			The two fees that fund these services are a Recreation Fee ($65 per student per semester) and Intramural and Intercollegiate Athletics Fee (about $45 per student each semester).
-            UTD has by far the lowest Intercollegiate Athletic Fee of any public university in Texas. For example, the University of Texas at Tyler
-            charges students $7 per credit hour per student each semester, capped at the cost 15 hours ($105).
+			The two fees that fund these services are a Recreation Fee (~$65 per
+			student per semester) and Intramural and Intercollegiate Athletics Fee
+			(~$45 per student each semester). UTD has by far the lowest
+			Intercollegiate Athletic Fee of any public university in Texas. For
+			example, the University of Texas at Tyler charges students $7 per credit
+			hour per student each semester, capped at the cost for 15 hours ($105).
 		</p>
-        <br />
-		<p>
-			For more information on student fees, see the Overview tab.
-		</p>
-        <br />
+		<br />
+		<p>For more information on student fees, see the Overview tab.</p>
+		<br />
 		<div
 			class="sankey"
 			id="sankey_recreation"
-			style="width: 100%; height: 800px">
-        </div>
+			style="width: 100%; height: 800px"></div>
 	</div>
 </section>
 
 <section id="parking" class="hidden">
-	<div class="p-4 md:mx-auto md:max-w-6xl"></div>
+	<div class="p-4 md:mx-auto md:max-w-6xl">
+		<h1 class="mt-8 text-2xl font-bold">Parking & Transportation</h1>
+		<p>
+			Parking and transportation is considered an auxiliary service. This means
+			that it is considered to be outside of the core purpose of the university,
+			educating degree-seeking students. In such, the university expects it to
+			be self-funded. It should, however, not run a significant profit, given
+			the university is a not a for-profit business.
+		</p>
+		<br />
+		<p>
+			As an auxiliary service parking and transportation is funded through a
+			Transportation Fee (~$18 per student each semester) and revenue from
+			parking passes and fines.
+		</p>
+		<br />
+		<div
+			class="sankey"
+			id="sankey_parking"
+			style="width: 100%; height: 800px"></div>
+	</div>
 </section>
 
 <section id="dining" class="hidden">
-	<div class="p-4 md:mx-auto md:max-w-6xl"></div>
+	<div class="p-4 md:mx-auto md:max-w-6xl">
+		<h1 class="mt-8 text-2xl font-bold">Dining</h1>
+		<p>
+			Dining is considered an auxiliary service. This means that it is
+			considered to be outside of the core purpose of the university, educating
+			degree-seeking students. In such, the university expects it to be
+			self-funded.
+		</p>
+		<br />
+		<p>
+			The services provided by UTD Dining are primarily handled through an
+			outside company,
+			<a
+				href="https://chartwellshighered.com/"
+				class="text-blue-600 hover:underline transition">
+				Chartwells Higher Education</a
+			>, a subsidiary of the multinational foodservice company
+			<a
+				href="https://www.compass-group.com/"
+				class="text-blue-600 hover:underline transition">
+				Compass Group</a
+			>. Presumably, the revenue from meal plans is directed to Chartwells and UTD for the operations of 
+            the dining hall, but the specifics of this contract are not currently available.
+		</p>
+		<br />
+		<div
+			class="sankey"
+			id="sankey_dining"
+			style="width: 100%; height: 800px"></div>
+	</div>
 </section>
