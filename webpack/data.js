@@ -1,10 +1,10 @@
 import sankey_top from '../data/top_level.json';
 import pie_schools from '../data/schools.json';
-import sankey_housing from '../src/data/housing.json';
-import sankey_recreation from '../src/data/recreation.json';
+import sankey_housing from '../data/housing.json';
+import sankey_recreation from '../data/recreation.json';
 import treemap_fees from '../data/fees.json';
 
-function buildSankey(divName, data) {
+function buildSankey(divName, data, padRight) {
     // Create root element with theme
     let root = am5.Root.new(divName);
     root.setThemes([

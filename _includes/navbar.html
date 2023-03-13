@@ -19,18 +19,8 @@
     <div class="hidden md:block p-4 pt-0 md:p-4" id="navbar-nav">
         <ul class="flex flex-col md:flex-row">
         <li>
-            <a href="{{ '/#findings' | relative_url }}" class="{% if page.id == "/" %} active {% endif %}m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition">
+            <a href="{{ '/details' | relative_url }}" class="{% if page.id == "/findings" %} active {% endif %}m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition" >
             Findings
-            </a>
-        </li>
-        <li>
-            <a href="{{ '/#future' | relative_url }}" class="{% if page.id == "/" %} active {% endif %}m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition" >
-            Future
-            </a>
-        </li>
-        <li>
-            <a href="{{ '/team' | relative_url }}" class="{% if page.id == "/team" %} active {% endif %}m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition" >
-            People
             </a>
         </li>
         <li>
@@ -39,8 +29,8 @@
             </a>
         </li>
         <li>
-            <a href="{{ '/details' | relative_url }}" class="{% if page.id == "/details" %} active {% endif %}m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition" >
-            Full Breakdown
+            <a href="{{ '/team' | relative_url }}" class="{% if page.id == "/team" %} active {% endif %}m-2 px-3 py-2 hover:bg-slate-900 focus:bg-slate-900 rounded-md font-bold text-lg transition" >
+            People
             </a>
         </li>
         </ul>
