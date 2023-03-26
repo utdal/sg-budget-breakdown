@@ -5,6 +5,8 @@ import sankey_recreation from '../data/recreation.json';
 import sankey_parking from '../data/parking.json';
 import sankey_dining from '../data/dining.json';
 import treemap_fees from '../data/fees.json';
+import revenue_time_series from '../data/revenue_time_series.json';
+import expenses_time_series from '../data/expenses_time_series.json';
 
 function buildSankey(divName, data, padRight) {
     // Create root element with theme
@@ -224,6 +226,132 @@ function buildPie(divName, data) {
     });
 }
 
+function buildLine(divName, data) {
+    let root = am5.Root.new(divName);
+    root.setThemes([
+        am5themes_Animated.new(root)
+    ]);
+
+    // Prepare data
+    const NUM_YEARS = 7
+    var transformed_data = [];
+    var cat_names = [];
+    let categories = data[0]['Children'];
+    for (let i = 0; i < categories.length; i++) {
+        cat_names.push(categories[i]['name']);
+        transformed_data.push([]);
+    }
+
+    for (let i = 0; i < NUM_YEARS; i++) {
+        let date = new Date();
+
+        let year_data = data[i];
+        let year = year_data['Year'];
+
+        date.setFullYear(year);
+
+        let categories = year_data['Children'];
+
+        for (let j = 0; j < categories.length; j++) {
+            transformed_data[j].push({
+                'year': date.getTime(),
+                'value': categories[j]['value']
+            });
+            
+        }
+    }
+
+    let chart = root.container.children.push(am5xy.XYChart.new(root, {
+        maxTooltipDistance: 0,
+    }));
+
+    let xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+        baseInterval: {
+            timeUnit: "year",
+            count: 1
+        },
+        renderer: am5xy.AxisRendererX.new(root, {}),
+        tooltip: am5.Tooltip.new(root, {})
+    }));
+
+    let yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+        renderer: am5xy.AxisRendererY.new(root, {})
+    }));
+
+
+    // Add series
+    for (var i = 0; i < cat_names.length; i++) {
+        let series = chart.series.push(am5xy.LineSeries.new(root, {
+            name: cat_names[i],
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "value",
+            valueXField: "year",
+            legendValueText: "{valueY}",
+            tooltip: am5.Tooltip.new(root, {
+            pointerOrientation: "horizontal",
+            labelText: "{valueY}"
+            })
+        }));
+
+        series.data.setAll(transformed_data[i]);
+        series.appear();
+    }
+
+
+    // Add cursor
+    let cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+        behavior: "none"
+    }));
+    cursor.lineY.set("visible", false);
+
+    // Add legend
+    let legend = chart.rightAxesContainer.children.push(am5.Legend.new(root, {
+        width: 400,
+        paddingLeft: 15,
+        height: am5.percent(100)
+    }));
+
+    // When legend item container is hovered, dim all the series except the hovered one
+    legend.itemContainers.template.events.on("pointerover", function(e) {
+        let itemContainer = e.target;
+        let series = itemContainer.dataItem.dataContext;
+
+        chart.series.each(function(chartSeries) {
+            if (chartSeries != series) {
+                chartSeries.strokes.template.setAll({
+                    strokeOpacity: 0.15,
+                    stroke: am5.color(0x000000)
+                });
+            } else {
+                chartSeries.strokes.template.setAll({
+                    strokeWidth: 3
+                });
+            }
+        })
+    })
+
+    // When legend item container is unhovered, make all series as they are
+    legend.itemContainers.template.events.on("pointerout", function(e) {
+        chart.series.each(function(chartSeries) {
+            chartSeries.strokes.template.setAll({
+            strokeOpacity: 1,
+            strokeWidth: 1,
+            stroke: chartSeries.get("fill")
+            });
+        });
+    })
+
+    legend.itemContainers.template.set("width", am5.p100);
+    legend.valueLabels.template.setAll({
+        width: am5.p100,
+        textAlign: "right"
+    });
+
+    legend.data.setAll(chart.series.values);
+    chart.appear(1000, 100);
+}
+
 buildSankey("sankey_top", sankey_top, 200);
 
 buildPie("pie_schools", pie_schools);
@@ -234,3 +362,6 @@ buildSankey("sankey_parking", sankey_parking, 300);
 buildSankey("sankey_dining", sankey_dining, 300);
 
 buildTreeMap("treemap_fees", treemap_fees);
+
+buildLine("line_revenue", revenue_time_series);
+buildLine("line_expenses", expenses_time_series);
