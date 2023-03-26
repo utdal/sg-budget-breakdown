@@ -15,6 +15,15 @@ title: Findings
 				>Overview</a
 			>
 		</li>
+		<li class="mr-2">
+			<a
+				href="#"
+				class="inline-block p-4 border-b-2 rounded-t-lg"
+				id="tab_time"
+				onClick="open_time()"
+				>Budget Over Time</a
+			>
+		</li>
         <li class="mr-2">
 			<a
 				href="#"
@@ -176,6 +185,23 @@ title: Findings
 			corresponding to a particular category of spending.
 		</p>
 		<div class="sankey w-full" id="sankey_top" style="height: 1200px"></div>
+	</div>
+</section>
+
+<section id="time" class="hidden">
+	<div class="mx-auto max-w-6xl p-4 lg:p-8">
+		<h1 class="mt-8 text-2xl font-bold">Revenues from 2015 to 2021</h1>
+		<br />
+		<div
+			class="sankey"
+			id="line_revenue"
+			style="width: 100%; height: 450px"></div>
+		<h1 class="mt-8 text-2xl font-bold">Expenses from 2015 to 2021</h1>
+		<br />
+		<div
+			class="sankey"
+			id="line_expenses"
+			style="width: 100%; height: 450px"></div>
 	</div>
 </section>
 
