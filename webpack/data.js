@@ -43,13 +43,13 @@ function buildTreeMap(divName, data) {
     let root = am5.Root.new(divName);
     const myTheme = am5.Theme.new(root);
     myTheme.rule("RoundedRectangle", ["hierarchy", "node", "shape", "depth1"]).setAll({
-    strokeWidth: 2
+        strokeWidth: 2
     });
 
     myTheme.rule("RoundedRectangle", ["hierarchy", "node", "shape", "depth2"]).setAll({
-    fillOpacity: 0,
-    strokeWidth: 1,
-    strokeOpacity: 0.2
+        fillOpacity: 0,
+        strokeWidth: 1,
+        strokeOpacity: 0.2
     });
 
     myTheme.rule("Label", ["node", "depth1"]).setAll({
@@ -58,12 +58,13 @@ function buildTreeMap(divName, data) {
     });
 
     myTheme.rule("Label", ["node", "depth2"]).setAll({
-        forceHidden: true
+        forceHidden: false,
+        fontSize: 11
     });
 
     root.setThemes([
-    am5themes_Animated.new(root),
-    myTheme
+        am5themes_Animated.new(root),
+        myTheme
     ]);
     var container = root.container.children.push(
         am5.Container.new(root, {
@@ -78,8 +79,8 @@ function buildTreeMap(divName, data) {
             sort: "descending",
             singleBranchOnly: false,
             downDepth: 1,
-            upDepth: -1,
-            initialDepth: 2,
+            upDepth: 0,
+            initialDepth: 1,
             valueField: "value",
             categoryField: "name",
             childDataField: "children",
@@ -87,12 +88,19 @@ function buildTreeMap(divName, data) {
             nodePaddingInner: 0
         })
     );
+
+    container.children.unshift(
+        am5hierarchy.BreadcrumbBar.new(root, {
+          series: series
+        })
+    );
+
     series.get("colors").set("step", 3);
     // Add data from object
     function processData(data) {
         var treeData = data;
         return [{
-          name: "Root",
+          name: "Top",
           children: treeData
         }];
       }
@@ -101,6 +109,14 @@ function buildTreeMap(divName, data) {
 }
 
 function buildPie(divName, data) {
+    // Prep data
+    const colors = [0xf94144, 0xf8961e, 0xf9c74f, 0x90be6d, 0x43aa8b, 0x577590, 0x277da1, 0x5a189a]
+    for (let i=0; i<8; i++) {
+        data[i]["sliceSettings"] = {
+            fill: am5.color(colors[i])
+        }
+    }
+
     let root = am5.Root.new(divName);
     root.setThemes([
         am5themes_Animated.new(root)
@@ -110,6 +126,7 @@ function buildPie(divName, data) {
         height: am5.p100,
         layout: root.horizontalLayout
     }));
+
     let columnChart = container.children.push(am5xy.XYChart.new(root, {
         width: am5.p50,
         panX: false,
@@ -144,14 +161,27 @@ function buildPie(divName, data) {
     columnSeries.columns.template.setAll({
         tooltipText: "{categoryY}: {valueX}"
     });
+
     columnChart.appear(1000, 100);
     let pieChart = container.children.push(
         am5percent.PieChart.new(root, {
             width: am5.p50,
             innerRadius: am5.percent(50)
         })
-      );
-      
+    );
+
+    columnSeries.bullets.push(function() {
+        return am5.Bullet.new(root, {
+          locationX: 1,
+          locationY: 0.5,
+          sprite: am5.Label.new(root, {
+            centerY: am5.p50,
+            text: "{valueX}",
+            populateText: true
+          })
+        });
+      });
+    
     // Create series
     let pieSeries = pieChart.series.push(
         am5percent.PieSeries.new(root, {
