@@ -505,6 +505,139 @@ function buildSC(divName, data) {
     chart.appear(1000, 100);
 }
 
+function buildTuition(divName) {
+    const colors = [0xf94144, 0xf8961e, 0xf9c74f, 0x90be6d, 0x43aa8b, 0x577590, 0x277da1, 0x5a189a];
+
+    let root = am5.Root.new(divName);
+    root.setThemes([
+        am5themes_Animated.new(root)
+    ]);
+
+    // Prepare data
+    var transformed_data = [
+        {
+            "year": "Undergraduate (In-State)",
+            "Administration": 242.8424,
+            "Scholarships": 2205.158941,
+            "Research": 435.4372614,
+            "Student Programs": 305.9311012,
+            "Facilities": 891.9406722,
+            "Instruction": 2464.690785,
+            "Other": 1073.498851
+        },
+        {
+            "year": "Undergraduate (Out-of-State)",
+            "Administration": 640.4272793,
+            "Scholarships": 5815.475432,
+            "Research": 1148.341123,
+            "Student Programs": 806.8056998,
+            "Facilities": 2352.238185,
+            "Instruction": 6499.916374,
+            "Other": 2831.045906
+        },
+        {
+            "year": "Graduate (In-State)",
+            "Administration": 305.2780121,
+            "Scholarships": 2772.112989,
+            "Research": 547.3896986,
+            "Student Programs": 384.5870533,
+            "Facilities": 1121.261727,
+            "Instruction": 3098.371374,
+            "Other": 1349.499146
+        },
+        {
+            "year": "Graduate (Out-of-State)",
+            "Administration": 592.4691346,
+            "Scholarships": 5379.985844,
+            "Research": 1062.348051,
+            "Student Programs": 746.3883726,
+            "Facilities": 2176.091755,
+            "Instruction": 6013.172695,
+            "Other": 2619.044148
+        }
+    ]
+
+    let chart = root.container.children.push(am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        layout: root.verticalLayout
+    }));
+
+    var xRenderer = am5xy.AxisRendererX.new(root, {});
+    let xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {})
+    }));
+
+    xRenderer.grid.template.setAll({
+        location: 1
+    });
+
+    xAxis.data.setAll(transformed_data);
+
+    let yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+        extraMax: 0,
+        renderer: am5xy.AxisRendererY.new(root, {})
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50
+    }));
+
+    // Add series
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+    function makeSeries(name, fieldName, i) {
+        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        extraMax: 0,
+        valueYField: fieldName,
+        categoryXField: "year"
+        }));
+    
+        series.columns.template.setAll({
+            tooltipText: "{name}, {categoryX}: {valueY}",
+            tooltipY: am5.percent(10)
+        });
+
+        series.data.setAll(transformed_data);
+
+        series.set("fill", am5.color(colors[i]));
+        series.set("stroke", am5.color(colors[i]));
+    
+        series.appear();
+    
+        series.bullets.push(function() {
+            return am5.Bullet.new(root, {
+                    sprite: am5.Label.new(root, {
+                    text: "{valueY.formatNumber('$#.0a')}",
+                    fill: root.interfaceColors.get("alternativeText"),
+                    centerY: am5.p50,
+                    centerX: am5.p50,
+                    populateText: true
+                })
+            });
+        });
+    
+        legend.data.push(series);
+    }
+
+    makeSeries("Administration", "Administration", 0);
+    makeSeries("Scholarships", "Scholarships", 1);
+    makeSeries("Research", "Research", 2);
+    makeSeries("Student Programs", "Student Programs", 3);
+    makeSeries("Facilities", "Facilities", 4);
+    makeSeries("Instruction", "Instruction", 5);
+    makeSeries("Other", "Other", 6);
+
+    chart.appear(1000, 100);
+}
+
 buildSankey("sankey_top", sankey_top, 200);
 
 buildPie("pie_schools", pie_schools);
@@ -521,3 +654,5 @@ buildLine("line_expenses", expenses_time_series);
 
 buildSC("stackedcol_revenue", revenue_time_series);
 buildSC("stackedcol_expenses", expenses_time_series);
+
+buildTuition("tuitionbill");
