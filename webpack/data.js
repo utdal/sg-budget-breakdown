@@ -54,12 +54,12 @@ function buildTreeMap(divName, data) {
 
     myTheme.rule("Label", ["node", "depth1"]).setAll({
         forceHidden: false,
-        fontSize: 11
+        fontSize: 12
     });
 
     myTheme.rule("Label", ["node", "depth2"]).setAll({
         forceHidden: false,
-        fontSize: 11
+        fontSize: 12
     });
 
     root.setThemes([
@@ -89,6 +89,11 @@ function buildTreeMap(divName, data) {
         })
     );
 
+    series.labels.template.setAll({
+        text: "{category}: {sum.formatNumber('#.0a')}",
+        fontSize: 12
+    });
+
     container.children.unshift(
         am5hierarchy.BreadcrumbBar.new(root, {
           series: series
@@ -103,14 +108,14 @@ function buildTreeMap(divName, data) {
           name: "Top",
           children: treeData
         }];
-      }
+    }
     series.data.setAll(processData(data));
     series.set("selectedDataItem", series.dataItems[0]);
 }
 
 function buildPie(divName, data) {
     // Prep data
-    const colors = [0xf94144, 0xf8961e, 0xf9c74f, 0x90be6d, 0x43aa8b, 0x577590, 0x277da1, 0x5a189a]
+    const colors = [0xf94144, 0xf8961e, 0xf9c74f, 0x90be6d, 0x43aa8b, 0x577590, 0x277da1, 0x5a189a];
     for (let i=0; i<8; i++) {
         data[i]["sliceSettings"] = {
             fill: am5.color(colors[i])
@@ -128,7 +133,7 @@ function buildPie(divName, data) {
     }));
 
     let columnChart = container.children.push(am5xy.XYChart.new(root, {
-        width: am5.p50,
+        width: 600,
         panX: false,
         panY: false,
         wheelX: "none",
@@ -146,6 +151,7 @@ function buildPie(divName, data) {
     });
 
     let xAxis = columnChart.xAxes.push(am5xy.ValueAxis.new(root, {
+        extraMax: 0.75,
         renderer: am5xy.AxisRendererX.new(root, {
             strokeOpacity: 0.1
         })
@@ -165,7 +171,7 @@ function buildPie(divName, data) {
     columnChart.appear(1000, 100);
     let pieChart = container.children.push(
         am5percent.PieChart.new(root, {
-            width: am5.p50,
+            width: 400,
             innerRadius: am5.percent(50)
         })
     );
@@ -176,7 +182,7 @@ function buildPie(divName, data) {
           locationY: 0.5,
           sprite: am5.Label.new(root, {
             centerY: am5.p50,
-            text: "{valueX}",
+            text: "{valueX.formatNumber('#.0a')}",
             populateText: true
           })
         });
@@ -257,6 +263,8 @@ function buildPie(divName, data) {
 }
 
 function buildLine(divName, data) {
+    const colors = [0xf94144, 0xf8961e, 0xf9c74f, 0x90be6d, 0x43aa8b, 0x577590, 0x277da1, 0x5a189a];
+
     let root = am5.Root.new(divName);
     root.setThemes([
         am5themes_Animated.new(root)
@@ -324,6 +332,12 @@ function buildLine(divName, data) {
             })
         }));
 
+        series.strokes.template.setAll({
+            strokeWidth: 3
+        });
+
+        series.set("fill", am5.color(colors[i]));
+        series.set("stroke", am5.color(colors[i]));
         series.data.setAll(transformed_data[i]);
         series.appear();
     }
@@ -351,11 +365,12 @@ function buildLine(divName, data) {
             if (chartSeries != series) {
                 chartSeries.strokes.template.setAll({
                     strokeOpacity: 0.15,
+                    strokeWidth: 3,
                     stroke: am5.color(0x000000)
                 });
             } else {
                 chartSeries.strokes.template.setAll({
-                    strokeWidth: 3
+                    strokeWidth: 4
                 });
             }
         })
@@ -366,7 +381,7 @@ function buildLine(divName, data) {
         chart.series.each(function(chartSeries) {
             chartSeries.strokes.template.setAll({
             strokeOpacity: 1,
-            strokeWidth: 1,
+            strokeWidth: 3,
             stroke: chartSeries.get("fill")
             });
         });
@@ -379,6 +394,114 @@ function buildLine(divName, data) {
     });
 
     legend.data.setAll(chart.series.values);
+    chart.appear(1000, 100);
+}
+
+function buildSC(divName, data) {
+    const colors = [0xf94144, 0xf8961e, 0xf9c74f, 0x90be6d, 0x43aa8b, 0x577590, 0x277da1, 0x5a189a];
+
+    let root = am5.Root.new(divName);
+    root.setThemes([
+        am5themes_Animated.new(root)
+    ]);
+
+    // Prepare data
+    const NUM_YEARS = 7
+    var transformed_data = [];
+
+    var cat_names = [];
+    let categories = data[0]['Children'];
+    for (let i = 0; i < categories.length; i++) {
+        cat_names.push(categories[i]['name']);
+    }
+
+    for (let i = 0; i < NUM_YEARS; i++) {
+        let year_data = data[i];
+        let year = year_data['Year'];
+        let categories = year_data['Children'];
+
+        let data_item = {
+            'year': year.toString(),
+        };
+        for (let j = 0; j < categories.length; j++) {
+            data_item[categories[j]['name']] = categories[j]['value'];
+        }
+
+        transformed_data.push(data_item);
+    }
+
+    let chart = root.container.children.push(am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        layout: root.verticalLayout
+    }));
+
+    var xRenderer = am5xy.AxisRendererX.new(root, {});
+    let xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {})
+    }));
+
+    xRenderer.grid.template.setAll({
+        location: 1
+    });
+
+    xAxis.data.setAll(transformed_data);
+
+    let yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+        renderer: am5xy.AxisRendererY.new(root, {})
+    }));
+
+    // Add legend
+    var legend = chart.children.push(am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50
+    }));
+
+    // Add series
+    // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+    function makeSeries(name, fieldName, i) {
+        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+        name: name,
+        stacked: true,
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: fieldName,
+        categoryXField: "year"
+        }));
+    
+        series.columns.template.setAll({
+            tooltipText: "{name}, {categoryX}: {valueY}",
+            tooltipY: am5.percent(10)
+        });
+
+        series.data.setAll(transformed_data);
+
+        series.set("fill", am5.color(colors[i]));
+        series.set("stroke", am5.color(colors[i]));
+    
+        series.appear();
+    
+        series.bullets.push(function() {
+        return am5.Bullet.new(root, {
+            sprite: am5.Label.new(root, {
+            text: "{valueY.formatNumber('#.0a')}",
+            fill: root.interfaceColors.get("alternativeText"),
+            centerY: am5.p50,
+            centerX: am5.p50,
+            populateText: true
+            })
+        });
+        });
+    
+        legend.data.push(series);
+    }
+
+    for (let i=0; i < cat_names.length; i++) {
+        makeSeries(cat_names[i], cat_names[i], i);
+    }
+
     chart.appear(1000, 100);
 }
 
@@ -395,3 +518,6 @@ buildTreeMap("treemap_fees", treemap_fees);
 
 buildLine("line_revenue", revenue_time_series);
 buildLine("line_expenses", expenses_time_series);
+
+buildSC("stackedcol_revenue", revenue_time_series);
+buildSC("stackedcol_expenses", expenses_time_series);
